@@ -516,7 +516,7 @@
       "interrupt_exist_connections": true
     },
     {
-      "tag": "🇭⁢香港",
+      "tag": "HK_Test",
       "type": "urltest",
       "outbounds": [],
       "url": "http://1.1.1.1/generate_204",
@@ -525,7 +525,7 @@
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇺⁢ United States",
+      "tag": "US_Test",
       "type": "urltest",
       "outbounds": [],
       "url": "http://1.1.1.1/generate_204",
@@ -534,7 +534,7 @@
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇸⁢ Singapore",
+      "tag": "Singapore_Test",
       "type": "urltest",
       "outbounds": [],
       "url": "http://1.1.1.1/generate_204",
@@ -543,7 +543,7 @@
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇯⁢ Japan",
+      "tag": "Japan_Test",
       "type": "urltest",
       "outbounds": [],
       "url": "http://1.1.1.1/generate_204",
@@ -552,7 +552,7 @@
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨⁢ Taiwan",
+      "tag": "Taiwan_Test",
       "type": "urltest",
       "outbounds": [],
       "url": "http://1.1.1.1/generate_204",
