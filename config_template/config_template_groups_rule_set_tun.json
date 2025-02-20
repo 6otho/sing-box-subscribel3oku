@@ -326,7 +326,7 @@
         {
           "action": "include",
           "keywords": [
-            "🇭⁢香港|HK|hk|香港|港|HongKong"
+            "HK"
           ]
         }
       ]
@@ -341,7 +341,7 @@
         {
           "action": "include",
           "keywords": [
-            "🇹⁢台湾|TW|tw|台湾|臺灣|台|Taiwan"
+            "Taiwan"
           ]
         }
       ]
@@ -356,7 +356,7 @@
         {
           "action": "include",
           "keywords": [
-            "🇸⁢新加坡|SG|sg|新加坡|狮|Singapore"
+            "Singapore"
           ]
         }
       ]
@@ -371,7 +371,7 @@
         {
           "action": "include",
           "keywords": [
-            "🇯⁢日本|JP|jp|日本|日|Japan"
+            "Japan"
           ]
         }
       ]
@@ -386,7 +386,7 @@
         {
           "action": "include",
           "keywords": [
-            "🇰⁢韩国|KR|kr|韩国|韩|Korea"
+            "Korea"
           ]
         }
       ]
@@ -401,7 +401,7 @@
         {
           "action": "include",
           "keywords": [
-            "🇺⁢美国|US|us|美国|美|United States"
+            "US"
           ]
         }
       ]
@@ -416,7 +416,11 @@
         {
           "action": "exclude",
           "keywords": [
-            "🇭⁢香港|HK|hk|香港|香|🇹⁢台湾|TW|tw|台湾|台|🇸⁢新加坡|SG|sg|新加坡|狮|🇯⁢日本|JP|jp|日本|日|🇺⁢美国|US|us|美国|美"
+            "HK",
+            "Taiwan",
+            "Singapore",
+            "Japan",
+            "US"
           ]
         }
       ]
@@ -431,7 +435,12 @@
         {
           "action": "exclude",
           "keywords": [
-            "网站|地址|剩余|过期|时间|有效"
+            "网站",
+            "地址",
+            "剩余",
+            "过期",
+            "时间",
+            "有效"
           ]
         }
       ],
@@ -447,11 +456,11 @@
       "tag": "AI",
       "type": "selector",
       "outbounds": [
-        "🇭⁢香港",
-        "🇺⁢ United States",
-        "🇸⁢ Singapore",
-        "🇯⁢ Japan",
-        "🇨⁢ Taiwan",
+        "HK",
+        "US",
+        "Singapore",
+        "Japan",
+        "Taiwan",
         "direct"
       ],
       "default": "direct",
@@ -461,11 +470,11 @@
       "tag": "Emby",
       "type": "selector",
       "outbounds": [
-        "🇭⁢香港",
-        "🇺⁢ United States",
-        "🇸⁢ Singapore",
-        "🇯⁢ Japan",
-        "🇨⁢ Taiwan",
+        "HK",
+        "US",
+        "Singapore",
+        "Japan",
+        "Taiwan",
         "direct"
       ],
       "default": "direct",
@@ -476,7 +485,7 @@
       "type": "selector",
       "outbounds": [
         "direct",
-        "HongKong",
+        "HK",
         "TaiWan",
         "Singapore",
         "Japan",
@@ -490,11 +499,11 @@
       "type": "selector",
       "outbounds": [
         "Proxy",
-        "🇭⁢香港",
-        "🇺⁢ United States",
-        "🇸⁢ Singapore",
-        "🇯⁢ Japan",
-        "🇨⁢ Taiwan",
+        "HK",
+        "US",
+        "Singapore",
+        "Japan",
+        "Taiwan",
         "direct"
       ],
       "default": "direct",
@@ -505,11 +514,11 @@
       "type": "selector",
       "outbounds": [
         "Proxy",
-        "🇭⁢香港",
-        "🇺⁢ United States",
-        "🇸⁢ Singapore",
-        "🇯⁢ Japan",
-        "🇨⁢ Taiwan",
+        "HK",
+        "US",
+        "Singapore",
+        "Japan",
+        "Taiwan",
         "direct"
       ],
       "default": "direct",
@@ -518,7 +527,6 @@
     {
       "tag": "HK_Test",
       "type": "urltest",
-      "outbounds": [],
       "url": "http://1.1.1.1/generate_204",
       "interval": "10m",
       "tolerance": 0,
@@ -527,7 +535,6 @@
     {
       "tag": "US_Test",
       "type": "urltest",
-      "outbounds": [],
       "url": "http://1.1.1.1/generate_204",
       "interval": "10m",
       "tolerance": 0,
@@ -536,7 +543,6 @@
     {
       "tag": "Singapore_Test",
       "type": "urltest",
-      "outbounds": [],
       "url": "http://1.1.1.1/generate_204",
       "interval": "10m",
       "tolerance": 0,
@@ -545,7 +551,6 @@
     {
       "tag": "Japan_Test",
       "type": "urltest",
-      "outbounds": [],
       "url": "http://1.1.1.1/generate_204",
       "interval": "10m",
       "tolerance": 0,
@@ -554,7 +559,6 @@
     {
       "tag": "Taiwan_Test",
       "type": "urltest",
-      "outbounds": [],
       "url": "http://1.1.1.1/generate_204",
       "interval": "10m",
       "tolerance": 0,
