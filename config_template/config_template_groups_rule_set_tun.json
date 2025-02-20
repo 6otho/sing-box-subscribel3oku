@@ -447,7 +447,7 @@
       "tag": "AI",
       "type": "selector",
       "outbounds": [
-        "🇭⁢香港 HongKong",
+        "🇭⁢香港",
         "🇺⁢ United States",
         "🇸⁢ Singapore",
         "🇯⁢ Japan",
@@ -461,7 +461,7 @@
       "tag": "Emby",
       "type": "selector",
       "outbounds": [
-        "🇭⁢香港 HongKong",
+        "🇭⁢香港",
         "🇺⁢ United States",
         "🇸⁢ Singapore",
         "🇯⁢ Japan",
@@ -490,7 +490,7 @@
       "type": "selector",
       "outbounds": [
         "Proxy",
-        "🇭⁢香港 HongKong",
+        "🇭⁢香港",
         "🇺⁢ United States",
         "🇸⁢ Singapore",
         "🇯⁢ Japan",
@@ -505,7 +505,7 @@
       "type": "selector",
       "outbounds": [
         "Proxy",
-        "🇭⁢香港 HongKong",
+        "🇭⁢香港",
         "🇺⁢ United States",
         "🇸⁢ Singapore",
         "🇯⁢ Japan",
@@ -516,7 +516,7 @@
       "interrupt_exist_connections": true
     },
     {
-      "tag": "🇭⁢香港 HongKong",
+      "tag": "🇭⁢香港",
       "type": "urltest",
       "outbounds": [],
       "url": "http://1.1.1.1/generate_204",
