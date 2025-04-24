@@ -345,11 +345,11 @@
       "tolerance": 50
     },
     {
+  "probes": [
+    {
       "tag": "America",
       "type": "urltest",
-      "outbounds": [
-        "{all}"
-      ],
+      "outbounds": ["{all}"],
       "filter": [
         {
           "action": "include",
@@ -367,18 +367,15 @@
       "tolerance": 50
     },
     {
-  "tag": "Global",
-  "type": "urltest",
-  "outbounds": [
-    "{all}"
-  ]
-}
-  ],
+      "tag": "Global",
+      "type": "urltest",
+      "outbounds": ["{all}"],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
       "tolerance": 50
     }
-  ],
+  ]
+}
   "route": {
     "auto_detect_interface": true,
     "final": "Proxy",
