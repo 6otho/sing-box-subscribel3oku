@@ -581,9 +581,7 @@
         "tag": "geosite-hbo",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCube
-
-X/meta-rules-dat@sing/geo/geosite/hbo.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/hbo.srs",
         "download_detour": "direct"
       },
       {
