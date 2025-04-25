@@ -198,7 +198,7 @@
       "default": "America"
     },
     {
-      "tag": "Meta",
+      "tag": "Games",
       "type": "selector",
       "outbounds": [
         "Proxy",
@@ -524,7 +524,7 @@
           "geosite-dmm",
           "geosite-steam"
         ],
-        "outbound": "Proxy"
+        "outbound": "Games"
       },
       {
         "rule_set": [
