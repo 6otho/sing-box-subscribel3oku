@@ -527,14 +527,17 @@
       {
         "rule_set": [
           "geoip-netflix",
-          "geosite-netflix",
-          "geosite-emby"
+          "geosite-netflix"
         ],
         "outbound": "Proxy"
       },
       {
         "rule_set": "geosite-disney",
         "outbound": "Proxy"
+      },
+      {
+        "rule_set": "geosite-emby",
+        "outbound": "Emby"
       },
       {
         "rule_set": [
