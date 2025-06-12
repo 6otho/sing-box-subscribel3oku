@@ -408,8 +408,8 @@
              "us",
              "美国"
            ]
-         }
-       ]
+        }
+      ],
   "route": {
     "auto_detect_interface": true,
     "final": "Proxy",
