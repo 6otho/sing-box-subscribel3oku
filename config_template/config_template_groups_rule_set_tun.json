@@ -104,7 +104,7 @@
         "🇯🇵 JP AUTO",
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
-        "Global"
+        ":globe_with_meridians: Global"
       ],
       "default": "🇺🇸 US AUTO"
     },
@@ -119,7 +119,7 @@
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
         "Proxy",
-        "Global"
+        ":globe_with_meridians: Global"
       ],
       "default": "Proxy"
     },
@@ -134,7 +134,7 @@
         "🇯🇵 JP AUTO",
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
-        "Global"
+        ":globe_with_meridians: Global"
       ],
       "default": "🇸🇬 SG AUTO"
     },
@@ -149,7 +149,7 @@
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
         "Proxy",
-        "Global"
+        ":globe_with_meridians: Global"
       ],
       "default": "Proxy"
     },
@@ -164,7 +164,7 @@
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
         "Proxy",
-        "Global"
+        ":globe_with_meridians: Global"
       ],
       "default": "Proxy"
     },
@@ -179,7 +179,7 @@
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
         "Proxy",
-        "Global"
+        ":globe_with_meridians: Global"
       ],
       "default": "Proxy"
     },
@@ -193,7 +193,8 @@
         "🇸🇬 SG AUTO",
         "🇯🇵 JP AUTO",
         "🇰🇷 KR AUTO",
-        "🇺🇸 US AUTO"
+        "🇺🇸 US AUTO"，
+        ":globe_with_meridians: Global"
       ],
       "default": "🇯🇵 JP AUTO"
     },
@@ -208,7 +209,7 @@
         "🇯🇵 JP AUTO",
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
-        "Global"
+        ":globe_with_meridians: Global"
       ]
     },
     {
@@ -222,7 +223,7 @@
         "🇯🇵 JP AUTO",
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
-        "Global"
+        ":globe_with_meridians: Global"
       ]
     },
     {
@@ -236,7 +237,7 @@
         "🇯🇵 JP AUTO",
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
-        "Global"
+        ":globe_with_meridians: Global"
       ]
     },
     {
@@ -382,8 +383,8 @@
       "tolerance": 50
     },
     {
-      "tag": "Global",
-      "type": "urltest",
+      "tag": ":globe_with_meridians: Global",
+      "type": "selector",
       "outbounds": [
         "{all}"
       ],
@@ -408,12 +409,7 @@
              "美国"
            ]
          }
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 50
-    }
-  ],
+       ],
   "route": {
     "auto_detect_interface": true,
     "final": "Proxy",
