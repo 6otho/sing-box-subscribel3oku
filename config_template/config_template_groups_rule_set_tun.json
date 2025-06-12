@@ -320,7 +320,7 @@
       "type": "urltest",
       "outbounds": [
         "{all}"
-      ],  
+      ],
       "filter": [
         {
           "action": "include",
@@ -383,33 +383,35 @@
       "tolerance": 50
     },
     {
-       "tag": "🇺🇳 Global",
-       "type": "selector",
-       "outbounds": [
-         "{all}"
-       ],
-       "filter": [
-         {
-           "action": "exclude",
-           "keywords": [
-             "HK",
-             "hk",
-             "香港",
-             "TW",
-             "tw",
-             "台湾",
-             "SG",
-             "sg",
-             "新加坡",
-             "JP",
-             "jp",
-             "日本",
-             "US",
-             "us",
-             "美国"
-           ]
-        }
+      "tag": "🇺🇳 Global",
+      "type": "selector",
+      "outbounds": [
+        "{all}"
       ],
+      "filter": [
+        {
+          "action": "exclude",
+          "keywords": [
+            "HK",
+            "hk",
+            "香港",
+            "TW",
+            "tw",
+            "台湾",
+            "SG",
+            "sg",
+            "新加坡",
+            "JP",
+            "jp",
+            "日本",
+            "US",
+            "us",
+            "美国"
+          ]
+        }
+      ]
+    }
+  ],
   "route": {
     "auto_detect_interface": true,
     "final": "Proxy",
@@ -498,7 +500,10 @@
         "outbound": "Twitter"
       },
       {
-        "rule_set": "geosite-facebook",
+        "rule_set": [
+          "geoip-facebook",
+          "geosite-facebook"
+        ],
         "outbound": "Facebook"
       },
       {
