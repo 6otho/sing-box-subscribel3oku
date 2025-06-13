@@ -59,13 +59,19 @@
     {
       "tag": "tun-in",
       "type": "tun",
-      "address": ["172.19.0.0/30"],
+      "address": [
+        "172.19.0.0/30"
+      ],
       "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
       "stack": "system",
       "platform": {
-        "http_proxy": { "enabled": true, "server": "127.0.0.1", "server_port": 2080 }
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
       }
     },
     {
@@ -73,17 +79,8 @@
       "type": "mixed",
       "listen": "127.0.0.1",
       "listen_port": 2080
-    },
-    {  "tag": "http-share",
-      "type": "http",
-      "listen": "0.0.0.0",
-      "listen_port": 8888,
-      "mux": { "enabled": true, "concurrency": 8 }
     }
-      ],
-      "multiplexing": { "enabled": true, "concurrency": 8 }
-    }
-  ]
+  ],
   "outbounds": [
     {
       "tag": "direct",
