@@ -83,7 +83,7 @@
       ],
       "multiplexing": { "enabled": true, "concurrency": 8 }
     }
-  ],
+  ]
   "outbounds": [
     {
       "tag": "direct",
