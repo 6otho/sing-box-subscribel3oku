@@ -1,4 +1,4 @@
-{
+那你帮我把这段完善一下共享网络代码？{
   "log": {
     "level": "info",
     "timestamp": true
@@ -77,7 +77,7 @@
     {
       "tag": "mixed-in",
       "type": "mixed",
-      "listen": "0.0.0.0",
+      "listen": "127.0.0.1",
       "listen_port": 2080
     }
   ],
