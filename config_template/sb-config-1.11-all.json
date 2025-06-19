@@ -90,8 +90,16 @@
       "tag": "Proxy",
       "type": "selector",
       "outbounds": [
-        "{all}"
-      ]
+        "{all}",
+        "🇭🇰 HK AUTO",
+        "🇨🇳 TW AUTO",
+        "🇸🇬 SG AUTO",
+        "🇯🇵 JP AUTO",
+        "🇰🇷 KR AUTO",
+        "🇺🇸 US AUTO",
+        "🌐 Global"
+      ],
+      "default": "🇸🇬 SG AUTO"
     },
     {
       "tag": "AI",
@@ -384,7 +392,7 @@
     },
     {
       "tag": "🌐 Global",
-      "type": "selector",
+      "type": "urltest",
       "outbounds": [
         "{all}"
       ],
