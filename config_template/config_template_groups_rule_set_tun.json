@@ -774,7 +774,7 @@
         "tag": "geosite-steam",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/steam.srs",
+        "url": "https://gh.ikuu.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/steam.srs",
         "download_detour": "direct"
       },
       {
