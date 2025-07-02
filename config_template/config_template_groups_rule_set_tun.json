@@ -22,7 +22,7 @@
       {
         "tag": "proxyDns",
         "address": "tls://8.8.8.8",
-        "detour": "Proxy"
+        "detour": "🚀 Proxy"
       },
       {
         "tag": "localDns",
@@ -44,7 +44,7 @@
         "server": "localDns"
       },
       {
-        "clash_mode": "global",
+        "clash_mode": "🌍 global",
         "server": "proxyDns"
       },
       {
@@ -87,7 +87,7 @@
       "type": "direct"
     },
     {
-      "tag": "Proxy",
+      "tag": "🚀 Proxy",
       "type": "selector",
       "outbounds": [
         "{all}",
@@ -102,7 +102,7 @@
       "default": "🇸🇬 SG AUTO"
     },
     {
-      "tag": "AI",
+      "tag": "🤖 AI",
       "type": "selector",
       "outbounds": [
         "Proxy",
@@ -117,7 +117,7 @@
       "default": "🇺🇸 US AUTO"
     },
     {
-      "tag": "Google",
+      "tag": "🔍 Google",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HK AUTO",
@@ -126,16 +126,16 @@
         "🇯🇵 JP AUTO",
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
-        "Proxy",
+        "🚀 Proxy",
         "🌐 Global"
       ],
-      "default": "Proxy"
+      "default": "🚀 Proxy"
     },
     {
-      "tag": "Telegram",
+      "tag": "💬 Telegram",
       "type": "selector",
       "outbounds": [
-        "Proxy",
+        "🚀 Proxy",
         "🇭🇰 HK AUTO",
         "🇨🇳 TW AUTO",
         "🇸🇬 SG AUTO",
@@ -147,7 +147,7 @@
       "default": "🇸🇬 SG AUTO"
     },
     {
-      "tag": "Twitter",
+      "tag": "✖️ Twitter",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HK AUTO",
@@ -156,13 +156,13 @@
         "🇯🇵 JP AUTO",
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
-        "Proxy",
+        "🚀 Proxy",
         "🌐 Global"
       ],
-      "default": "Proxy"
+      "default": "🚀 Proxy"
     },
     {
-      "tag": "Emby",
+      "tag": "🎥 Emby",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HK AUTO",
@@ -171,13 +171,13 @@
         "🇯🇵 JP AUTO",
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
-        "Proxy",
+        "🚀 Proxy",
         "🌐 Global"
       ],
-      "default": "Proxy"
+      "default": "🚀 Proxy"
     },
     {
-      "tag": "Spotify",
+      "tag": "🎵 Spotify",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HK AUTO",
@@ -186,16 +186,16 @@
         "🇯🇵 JP AUTO",
         "🇰🇷 KR AUTO",
         "🇺🇸 US AUTO",
-        "Proxy",
+        "🚀 Proxy",
         "🌐 Global"
       ],
-      "default": "Proxy"
+      "default": "🚀 Proxy"
     },
     {
-      "tag": "Tiktok",
+      "tag": "📽️ Tiktok",
       "type": "selector",
       "outbounds": [
-        "Proxy",
+        "🚀 Proxy",
         "🇭🇰 HK AUTO",
         "🇨🇳 TW AUTO",
         "🇸🇬 SG AUTO",
@@ -207,10 +207,10 @@
       "default": "🇯🇵 JP AUTO"
     },
     {
-      "tag": "Facebook",
+      "tag": "📖 Facebook",
       "type": "selector",
       "outbounds": [
-        "Proxy",
+        "🚀 Proxy",
         "🇭🇰 HK AUTO",
         "🇨🇳 TW AUTO",
         "🇸🇬 SG AUTO",
@@ -221,10 +221,10 @@
       ]
     },
     {
-      "tag": "Youtube",
+      "tag": "📺 Youtube",
       "type": "selector",
       "outbounds": [
-        "Proxy",
+        "🚀 Proxy",
         "🇭🇰 HK AUTO",
         "🇨🇳 TW AUTO",
         "🇸🇬 SG AUTO",
@@ -235,10 +235,10 @@
       ]
     },
     {
-      "tag": "Games",
+      "tag": "🎮 Games",
       "type": "selector",
       "outbounds": [
-        "Proxy",
+        "🚀 Proxy",
         "🇭🇰 HK AUTO",
         "🇨🇳 TW AUTO",
         "🇸🇬 SG AUTO",
@@ -249,11 +249,11 @@
       ]
     },
     {
-      "tag": "China",
+      "tag": "🇨🇳 China",
       "type": "selector",
       "outbounds": [
         "direct",
-        "Proxy"
+        "🚀 Proxy"
       ]
     },
     {
@@ -425,7 +425,7 @@
   ],
   "route": {
     "auto_detect_interface": true,
-    "final": "Proxy",
+    "final": "🚀 Proxy",
     "rules": [
       {
         "inbound": [
@@ -454,16 +454,16 @@
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "clash_mode": "global",
-        "outbound": "Proxy"
+        "clash_mode": "🌍 global",
+        "outbound": "🚀 Proxy"
       },
       {
         "clash_mode": "direct",
         "outbound": "direct"
       },
       {
-        "clash_mode": "global",
-        "outbound": "Proxy"
+        "clash_mode": "🌍 global",
+        "outbound": "🚀 Proxy"
       },
       {
         "domain": [
@@ -480,13 +480,13 @@
       },
       {
         "rule_set": "geosite-openai",
-        "outbound": "AI"
+        "outbound": "🤖 AI"
       },
       {
         "rule_set": [
           "geosite-youtube"
         ],
-        "outbound": "Youtube"
+        "outbound": "📺 Youtube"
       },
       {
         "rule_set": [
@@ -494,59 +494,59 @@
           "geosite-google",
           "geosite-github"
         ],
-        "outbound": "Google"
+        "outbound": "🔍 Google"
       },
       {
         "rule_set": [
           "geoip-telegram",
           "geosite-telegram"
         ],
-        "outbound": "Telegram"
+        "outbound": "💬 Telegram"
       },
       {
         "rule_set": [
           "geoip-twitter",
           "geosite-twitter"
         ],
-        "outbound": "Twitter"
+        "outbound": "✖️ Twitter"
       },
       {
         "rule_set": [
           "geoip-facebook",
           "geosite-facebook"
         ],
-        "outbound": "Facebook"
+        "outbound": "📖 Facebook"
       },
       {
         "rule_set": "geosite-bilibili",
-        "outbound": "China"
+        "outbound": "🇨🇳 China"
       },
       {
         "rule_set": "geosite-bahamut",
-        "outbound": "Proxy"
+        "outbound": "🚀 Proxy"
       },
       {
         "rule_set": "geosite-spotify",
-        "outbound": "Spotify"
+        "outbound": "🎵 Spotify"
       },
       {
         "rule_set": "geosite-tiktok",
-        "outbound": "Tiktok"
+        "outbound": "📽️ Tiktok"
       },
       {
         "rule_set": [
           "geoip-netflix",
           "geosite-netflix"
         ],
-        "outbound": "Proxy"
+        "outbound": "🚀 Proxy"
       },
       {
         "rule_set": "geosite-disney",
-        "outbound": "Proxy"
+        "outbound": "🚀 Proxy"
       },
       {
         "rule_set": "geosite-emby",
-        "outbound": "Emby"
+        "outbound": "🎥 Emby"
       },
       {
         "rule_set": [
@@ -557,7 +557,7 @@
       },
       {
         "rule_set": "geosite-microsoft",
-        "outbound": "Proxy"
+        "outbound": "🚀 Proxy"
       },
       {
         "rule_set": [
@@ -565,7 +565,7 @@
           "geosite-dmm",
           "geosite-steam"
         ],
-        "outbound": "Games"
+        "outbound": "🎮 Games"
       },
       {
         "rule_set": [
@@ -573,7 +573,7 @@
           "geosite-primevideo",
           "geosite-amazon"
         ],
-        "outbound": "Proxy"
+        "outbound": "🚀 Proxy"
       },
       {
         "rule_set": "geosite-geolocation-!cn",
@@ -584,7 +584,7 @@
           "geoip-cn",
           "geosite-cn"
         ],
-        "outbound": "China"
+        "outbound": "🇨🇳 China"
       }
     ],
     "rule_set": [
