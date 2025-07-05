@@ -116,7 +116,6 @@
     }
   ],
   "outbounds": [
-    // ======= 基础连接策略 ======= //
     {
       "tag": "direct",
       "type": "direct"
@@ -129,8 +128,6 @@
       "tag": "dns-out",
       "type": "dns"
     },
-    
-    // ======= 代理选择器 ======= //
     {
       "tag": "🚀 Proxy",
       "type": "selector",
@@ -203,8 +200,6 @@
       "outbounds": ["direct", "🚀 Proxy"],
       "default": "direct"
     },
-    
-    // ======= 广告拦截选择器 ======= //
     {
       "tag": "🪧 广告拦截",
       "type": "selector",
@@ -385,7 +380,6 @@
     "auto_detect_interface": true,
     "final": "🚀 Proxy",
     "rules": [
-      // ====== 广告拦截规则 ====== //
       {
         "domain": ["gh-proxy.com"],
         "outbound": "direct"
@@ -413,8 +407,6 @@
         "rule_set": ["geosite-private", "geoip-private", "geoip-cn"],
         "outbound": "direct"
       },
-      
-      // ====== 核心路由规则 ====== //
       {
         "inbound": ["tun-in", "mixed-in"],
         "action": "sniff"
@@ -459,8 +451,6 @@
         "ip_is_private": true,
         "outbound": "direct"
       },
-      
-      // ====== 应用分流规则 ====== //
       {
         "rule_set": "geosite-openai",
         "outbound": "🤖 AI"
@@ -539,7 +529,6 @@
       }
     ],
     "rule_set": [
-      // ====== 广告拦截规则集 ====== //
       {
         "tag": "AWAvenue-Ads",
         "type": "remote",
