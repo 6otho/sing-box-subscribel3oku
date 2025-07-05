@@ -218,8 +218,6 @@
       "outbounds": ["block", "direct", "🚀 Proxy"],
       "default": "block"
     },
-    
-    // ======= 地区选择器 ======= //
     {
       "tag": "🇭🇰 HK AUTO",
       "type": "urltest",
