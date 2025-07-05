@@ -14,12 +14,14 @@
       {
         "tag": "DIRECT-DNS",
         "address": "https://dns.alidns.com/dns-query",
-        "detour": "direct"
+        "detour": "direct",
+        "address_resolver": "local"  // 关键修复
       },
       {
         "tag": "PROXY-DNS",
         "address": "https://dns.google/dns-query",
-        "detour": "🚀 Proxy"
+        "detour": "🚀 Proxy",
+        "address_resolver": "local"  // 关键修复
       },
       {
         "tag": "FAKEIP-DNS",
