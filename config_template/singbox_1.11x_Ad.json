@@ -570,7 +570,7 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "geosite-openai",
+        "rule_set": ["geosite-openai"],
         "outbound": "🤖 AI"
       },
       {
@@ -600,23 +600,23 @@
         "outbound": "✖️ Twitter"
       },
       {
-        "rule_set": "geosite-facebook",
+        "rule_set": ["geosite-facebook"],
         "outbound": "📖 Facebook"
       },
       {
-        "rule_set": "geosite-bilibili",
+        "rule_set": ["geosite-bilibili"],
         "outbound": "🇨🇳 China"
       },
       {
-        "rule_set": "geosite-bahamut",
+        "rule_set": ["geosite-bahamut"],
         "outbound": "🚀 Proxy"
       },
       {
-        "rule_set": "geosite-spotify",
+        "rule_set": ["geosite-spotify"],
         "outbound": "🎵 Spotify"
       },
       {
-        "rule_set": "geosite-tiktok",
+        "rule_set": ["geosite-tiktok"],
         "outbound": "📽️ Tiktok"
       },
       {
@@ -627,11 +627,11 @@
         "outbound": "🚀 Proxy"
       },
       {
-        "rule_set": "geosite-disney",
+        "rule_set": ["geosite-disney"],
         "outbound": "🚀 Proxy"
       },
       {
-        "rule_set": "geosite-emby",
+        "rule_set": ["geosite-emby"],
         "outbound": "🎥 Emby"
       },
       {
@@ -642,7 +642,7 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "geosite-microsoft",
+        "rule_set": ["geosite-microsoft"],
         "outbound": "🚀 Proxy"
       },
       {
@@ -662,7 +662,7 @@
         "outbound": "🚀 Proxy"
       },
       {
-        "rule_set": "geosite-geolocation-!cn",
+        "rule_set": ["geosite-geolocation-!cn"],
         "outbound": "🌐 Global"
       },
       {
