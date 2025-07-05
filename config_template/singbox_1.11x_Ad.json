@@ -496,9 +496,7 @@
         "outbound": "direct"
       },
       {
-        "rule_set": [
-          "AWAvenue-Ads"
-        ],
+        "rule_set": ["AWAvenue-Ads"],
         "outbound": "🔈 广告拦截"
       },
       {
@@ -513,17 +511,11 @@
         "outbound": "💧 泄漏拦截"
       },
       {
-        "rule_set": [
-          "BlockHttpDNS"
-        ],
+        "rule_set": ["BlockHttpDNS"],
         "outbound": "🔎 HttpDNS"
       },
       {
-        "rule_set": [
-          "geosite-private", 
-          "geoip-private", 
-          "geoip-cn"
-        ],
+        "rule_set": ["geosite-private", "geoip-private", "geoip-cn"],
         "outbound": "direct"
       },
       {
@@ -543,16 +535,12 @@
         "action": "hijack-dns"
       },
       {
-        "rule_set": [
-          "geosite-category-ads-all"
-        ],
+        "rule_set": ["geosite-category-ads-all"],
         "clash_mode": "rule",
         "action": "reject"
       },
       {
-        "rule_set": [
-          "geosite-category-ads-all"
-        ],
+        "rule_set": ["geosite-category-ads-all"],
         "clash_mode": "global",
         "outbound": "🚀 Proxy"
       },
@@ -578,127 +566,79 @@
         "outbound": "direct"
       },
       {
-        "rule_set": [
-          "geosite-openai"
-        ],
+        "rule_set": ["geosite-openai"],
         "outbound": "🤖 AI"
       },
       {
-        "rule_set": [
-          "geosite-youtube"
-        ],
+        "rule_set": ["geosite-youtube"],
         "outbound": "📺 Youtube"
       },
       {
-        "rule_set": [
-          "geoip-google", 
-          "geosite-google", 
-          "geosite-github"
-        ],
+        "rule_set": ["geoip-google", "geosite-google", "geosite-github"],
         "outbound": "🔍 Google"
       },
       {
-        "rule_set": [
-          "geoip-telegram",
-          "geosite-telegram"
-        ],
+        "rule_set": ["geoip-telegram", "geosite-telegram"],
         "outbound": "💬 Telegram"
       },
       {
-        "rule_set": [
-          "geoip-twitter", 
-          "geosite-twitter"
-        ],
+        "rule_set": ["geoip-twitter", "geosite-twitter"],
         "outbound": "✖️ Twitter"
       },
       {
-        "rule_set": [
-          "geosite-facebook"
-        ],
+        "rule_set": ["geosite-facebook"],
         "outbound": "📖 Facebook"
       },
       {
-        "rule_set": [
-          "geosite-bilibili"
-        ],
+        "rule_set": ["geosite-bilibili"],
         "outbound": "🇨🇳 China"
       },
       {
-        "rule_set": [
-          "geosite-bahamut"
-        ],
+        "rule_set": ["geosite-bahamut"],
         "outbound": "🚀 Proxy"
       },
       {
-        "rule_set": [
-          "geosite-spotify"
-        ],
+        "rule_set": ["geosite-spotify"],
         "outbound": "🎵 Spotify"
       },
       {
-        "rule_set": [
-          "geosite-tiktok"
-        ],
+        "rule_set": ["geosite-tiktok"],
         "outbound": "📽️ Tiktok"
       },
       {
-        "rule_set": [
-          "geoip-netflix",
-          "geosite-netflix"
-        ],
+        "rule_set": ["geoip-netflix", "geosite-netflix"],
         "outbound": "🚀 Proxy"
       },
       {
-        "rule_set": [
-          "geosite-disney"
-        ],
+        "rule_set": ["geosite-disney"],
         "outbound": "🚀 Proxy"
       },
       {
-        "rule_set": [
-          "geosite-emby"
-        ],
+        "rule_set": ["geosite-emby"],
         "outbound": "🎥 Emby"
       },
       {
-        "rule_set": [
-          "geoip-apple",
-          "geosite-apple"
-        ],
+        "rule_set": ["geoip-apple", "geosite-apple"],
         "outbound": "direct"
       },
       {
-        "rule_set": [
-          "geosite-microsoft"
-        ],
+        "rule_set": ["geosite-microsoft"],
         "outbound": "🚀 Proxy"
       },
       {
-        "rule_set": [
-          "geosite-category-games",
-          "geosite-dmm",
-          "geosite-steam"
-        ],
+        "rule_set": ["geosite-category-games", "geosite-dmm", "geosite-steam"],
         "outbound": "🎮 Games"
       },
       {
-        "rule_set": [
-          "geosite-hbo",
-          "geosite-primevideo", 
-          "geosite-amazon"
-        ],
+        "rule_set": ["geosite-hbo", "geosite-primevideo", "geosite-amazon"],
         "outbound": "🚀 Proxy"
       },
       {
-        "rule_set": [
-          "geosite-geolocation-!cn"
-        ],
+        "rule_set": ["geosite-geolocation-!cn"],
         "outbound": "🌐 Global"
       },
       {
-        "rule_set": [
-          "geoip-cn", "geosite-cn"
-        ],
+        "rule_set": ["geoip-cn", "geosite-cn"],
         "outbound": "🇨🇳 China"
       }
     ],
