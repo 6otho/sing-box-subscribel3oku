@@ -582,8 +582,6 @@
         "format": "binary",
         "download_detour": "direct"
       },
-      
-      // ====== 原有规则集 ====== //
       {
         "tag": "geosite-category-ads-all",
         "type": "remote",
