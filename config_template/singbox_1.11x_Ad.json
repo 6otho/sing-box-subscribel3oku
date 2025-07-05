@@ -10,7 +10,7 @@
       "external_controller": "0.0.0.0:20123",
       "external_ui": "ui",
       "secret": "",
-      "default_mode": "规则",
+      "default_mode": "rule",
       "external_ui_download_url": "https://ghfast.top/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "direct",
       "access_control_allow_origin": [
@@ -62,11 +62,11 @@
         "server": "DIRECT-DNS"
       },
       {
-        "clash_mode": "直连",
+        "clash_mode": "direct",
         "server": "DIRECT-DNS"
       },
       {
-        "clash_mode": "全局",
+        "clash_mode": "global",
         "server": "PROXY-DNS"
       },
       {
@@ -201,7 +201,7 @@
       "default": "direct"
     },
     {
-      "tag": "🪧 广告拦截",
+      "tag": "🔈 广告拦截",
       "type": "selector",
       "outbounds": ["block", "direct", "🚀 Proxy"],
       "default": "block"
@@ -384,7 +384,7 @@
       },
       {
         "rule_set": ["AWAvenue-Ads"],
-        "outbound": "🪧 广告拦截"
+        "outbound": "🔈 广告拦截"
       },
       {
         "type": "logical",
@@ -420,20 +420,20 @@
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "clash_mode": "规则",
+        "clash_mode": "rule",
         "action": "reject"
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "clash_mode": "全局",
+        "clash_mode": "global",
         "outbound": "🚀 Proxy"
       },
       {
-        "clash_mode": "直连",
+        "clash_mode": "direct",
         "outbound": "direct"
       },
       {
-        "clash_mode": "全局",
+        "clash_mode": "global",
         "outbound": "🚀 Proxy"
       },
       {
