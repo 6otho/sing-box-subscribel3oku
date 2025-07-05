@@ -57,17 +57,8 @@
       }
     ],
     "rules": [
-      {
-        "outbound": "any",
-        "server": "DIRECT-DNS"
-      },
-      {
-        "clash_mode": "direct",
-        "server": "DIRECT-DNS"
-      },
-      {
-        "clash_mode": "global",
-        "server": "PROXY-DNS"
+      { 
+        "server": "DIRECT-DNS" 
       },
       {
         "rule_set": [
@@ -419,12 +410,12 @@
         "action": "hijack-dns"
       },
       {
-        "rule_set": "geosite-category-ads-all",
+        "rule_set": ["geosite-category-ads-all"],
         "clash_mode": "rule",
         "action": "reject"
       },
       {
-        "rule_set": "geosite-category-ads-all",
+        "rule_set": ["geosite-category-ads-all"],
         "clash_mode": "global",
         "outbound": "🚀 Proxy"
       },
