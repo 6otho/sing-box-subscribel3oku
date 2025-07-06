@@ -263,7 +263,27 @@
         "direct",
         "🚀 Proxy"
       ],
-      "default": "block"
+      "default": "reject"
+    },
+    {
+      "tag": "💧 Leak interception",
+      "type": "selector",
+      "outbounds": [
+        "reject",
+        "direct",
+        "🚀 Proxy"
+      ],
+      "default": "reject"
+    },
+    {
+      "tag": "🔎 HttpDNS",
+      "type": "selector",
+      "outbounds": [
+        "reject",
+        "direct",
+        "🚀 Proxy"
+      ],
+      "default": "reject"
     },
     {
       "tag": "🇨🇳 China",
@@ -441,26 +461,6 @@
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
-    },
-    {
-      "tag": "💧 Leak interception",
-      "type": "selector",
-      "outbounds": [
-        "reject",
-        "direct",
-        "🚀 Proxy"
-      ],
-      "default": "reject"
-    },
-    {
-      "tag": "🔎 HttpDNS",
-      "type": "selector",
-      "outbounds": [
-        "reject",
-        "direct",
-        "🚀 Proxy"
-      ],
-      "default": "reject"
     }
   ],
   "route": {
