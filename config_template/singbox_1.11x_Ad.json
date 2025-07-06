@@ -341,109 +341,172 @@
             ]
         },
         {
-            "tag": "♻️ 自动选择",
-            "type": "urltest",
-            "interrupt_exist_connections": true,
-            "url": "https://www.gstatic.com/generate_204",
-            "interval": "3m",
-            "tolerance": 150,
-            "outbounds": [
-                "{all}"
-            ]
-        },
+      "tag": "🇭🇰 香港自动",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
         {
-            "tag": "🇺🇸 美国自动",
-            "type": "urltest",
-            "interrupt_exist_connections": true,
-            "url": "https://www.gstatic.com/generate_204",
-            "interval": "3m",
-            "tolerance": 150,
-            "outbounds": [
-                "^.*\\.(us|美国)$",
-                "🇺🇸",
-                "US",
-                "us",
-                "United\\s?States"
-            ]
-        },
-        {
-            "tag": "🇭🇰 香港自动",
-            "type": "urltest",
-            "interrupt_exist_connections": true,
-            "url": "https://www.gstatic.com/generate_204",
-            "interval": "3m",
-            "tolerance": 150,
-            "outbounds": [
-                "^.*\\.(hk|香港|港)$",
-                "🇭🇰",
-                "HK",
-                "hk",
-                "HongKong",
-                "Hong Kong"
-            ]
-        },
-        {
-            "tag": "🇯🇵 日本自动",
-            "type": "urltest",
-            "interrupt_exist_connections": true,
-            "url": "https://www.gstatic.com/generate_204",
-            "interval": "3m",
-            "tolerance": 150,
-            "outbounds": [
-                "^.*\\.(jp|日本)$",
-                "🇯🇵",
-                "JP",
-                "jp",
-                "Japan"
-            ]
-        },
-        {
-            "tag": "🇰🇷 韩国自动",
-            "type": "urltest",
-            "interrupt_exist_connections": true,
-            "url": "https://www.gstatic.com/generate_204",
-            "interval": "3m",
-            "tolerance": 150,
-            "outbounds": [
-                "^.*\\.(kr|韩国)$",
-                "🇰🇷",
-                "KR",
-                "kr",
-                "Korea",
-                "South\\s?Korea"
-            ]
-        },
-        {
-            "tag": "🇸🇬 新加坡自动",
-            "type": "urltest",
-            "interrupt_exist_connections": true,
-            "url": "https://www.gstatic.com/generate_204",
-            "interval": "3m",
-            "tolerance": 150,
-            "outbounds": [
-                "^.*\\.(sg|新加坡|狮城)$",
-                "🇸🇬",
-                "SG",
-                "sg",
-                "Singapore"
-            ]
-        },
-        {
-            "tag": "🇹🇼 台湾自动",
-            "type": "urltest",
-            "interrupt_exist_connections": true,
-            "url": "https://www.gstatic.com/generate_204",
-            "interval": "3m",
-            "tolerance": 150,
-            "outbounds": [
-                "^.*\\.(tw|台湾|臺灣|台)$",
-                "🇹🇼",
-                "TW",
-                "tw",
-                "Taiwan"
-            ]
+          "action": "include",
+          "keywords": [
+            "^.*\\.(hk|香港|港)$",
+            "🇭🇰",
+            "HK",
+            "hk",
+            "HongKong",
+            "Hong\\s?Kong"
+          ]
         }
-    ],
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇨🇳 台湾自动",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(tw|台湾|臺灣|台)$",
+            "🇹🇼",
+            "TW",
+            "tw",
+            "Taiwan"
+          ]
+        }
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇸🇬 新加坡自动",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(sg|新加坡|狮城)$",
+            "🇸🇬",
+            "SG",
+            "sg",
+            "Singapore"
+          ]
+        }
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇯🇵 日本自动",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(jp|日本)$",
+            "🇯🇵",
+            "JP",
+            "jp",
+            "Japan"
+          ]
+        }
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇰🇷 韩国自动",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(kr|韩国)$",
+            "🇰🇷",
+            "KR",
+            "kr",
+            "Korea",
+            "South\\s?Korea"
+          ]
+        }
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🇺🇸 美国自动",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(us|美国)$",
+            "🇺🇸",
+            "US",
+            "us",
+            "United\\s?States"
+          ]
+        }
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
+    },
+    {
+      "tag": "🌐 全球自动",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "exclude",
+          "keywords": [
+            "HK",
+            "hk",
+            "香港",
+            "TW",
+            "tw",
+            "台湾",
+            "SG",
+            "sg",
+            "新加坡",
+            "JP",
+            "jp",
+            "日本",
+            "🇰🇷",
+            "KR",
+            "韩国",
+            "US",
+            "us",
+            "美国"
+          ]
+        }
+      ]
+    }
+  ],
     "route": {
         "auto_detect_interface": true,
         "final": "🚀 节点选择",
