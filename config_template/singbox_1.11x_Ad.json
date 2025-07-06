@@ -118,16 +118,14 @@
   ],
   "outbounds": [
     {
-      "tag": "direct",
-      "type": "direct"
-    },
-    {
-      "tag": "block",
-      "type": "block"
-    },
-    {
-      "tag": "dns-out",
-      "type": "dns"
+      "tag": "🚀 Proxy",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "direct",
+        "block",
+        "{all}"
+      ]
     },
     {
       "tag": "🚀 Proxy",
