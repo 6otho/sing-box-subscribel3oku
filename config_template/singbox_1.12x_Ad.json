@@ -3,7 +3,7 @@
         "disabled": false,
         "level": "info",
         "output": "",
-        "timestamp": false
+        "timestamp": true
     },
     "experimental": {
         "clash_api": {
@@ -19,49 +19,55 @@
                 "https://yacd.metacubex.one",
                 "https://d.metacubex.one",
                 "https://board.zash.run.place"
-            ],
-            "access_control_allow_private_network": true
+            ]
         },
         "cache_file": {
             "enabled": true,
             "path": "cache.db",
-            "cache_id": "",
-            "store_fakeip": true,
-            "store_rdrc": true,
-            "rdrc_timeout": "1d"
+            "store_fakeip": true
         }
     },
     "dns": {
         "servers": [
             {
-                "type": "local",
+                "tag": "FAKEIP-DNS",
+                "type": "fakeip",
+                "inet4_range": "198.18.0.0/15",
+                "inet6_range": "fc00::/18"
+            },
+            {
                 "tag": "local",
+                "type": "local",
                 "detour": "🎯 全球直连"
             },
             {
-                "type": "https",
                 "tag": "DIRECT-DNS",
-                "detour": "🎯 全球直连",
-                "server_port": 443,
-                "server": "dns.alidns.com",
-                "domain_resolver": "local"
-            },
-            {
                 "type": "https",
-                "tag": "PROXY-DNS",
-                "detour": "🚀 节点选择",
-                "server_port": 443,
-                "server": "dns.google",
-                "domain_resolver": "local"
+                "server": "https://dns.alidns.com/dns-query",
+                "domain_resolver": "local",
+                "detour": "🎯 全球直连"
             },
             {
-                "type": "fakeip",
-                "tag": "FAKEIP-DNS",
-                "inet4_range": "198.18.0.0/15",
-                "inet6_range": "fc00::/18"
+                "tag": "PROXY-DNS",
+                "type": "https",
+                "server": "https://dns.google/dns-query",
+                "domain_resolver": "local",
+                "detour": "🚀 节点选择"
             }
         ],
         "rules": [
+            {
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
+                "server": "FAKEIP-DNS",
+                "rewrite_ttl": 1
+            },
+            {
+                "outbound": "any",
+                "server": "DIRECT-DNS"
+            },
             {
                 "clash_mode": "direct",
                 "server": "DIRECT-DNS"
@@ -76,13 +82,6 @@
                     "geosite-private"
                 ],
                 "server": "DIRECT-DNS"
-            },
-            {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "server": "FAKEIP-DNS"
             }
         ],
         "disable_cache": true,
@@ -91,35 +90,39 @@
         "final": "PROXY-DNS",
         "strategy": "prefer_ipv4"
     },
-  "inbounds": [
-    {
-      "tag": "tun-in",
-      "type": "tun",
-      "address": [
-        "172.19.0.0/30",
-        "fdfe:dcba:9876::0/126"
-      ],
-      "stack": "system",
-      "auto_route": true,
-      "strict_route": true,
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 7890
+    "inbounds": [
+        {
+            "tag": "tun-in",
+            "type": "tun",
+            "address": [
+                "172.19.0.1/30"
+            ],
+            "route_address": [
+                "0.0.0.0/0"
+            ],
+            "route_exclude_address": [
+                "192.168.0.0/16"
+            ],
+            "mtu": 9000,
+            "stack": "system",
+            "platform": {
+                "http_proxy": {
+                    "enabled": true,
+                    "server": "127.0.0.1",
+                    "server_port": 2080
+                }
+            }
+        },
+        {
+            "tag": "mixed-in",
+            "type": "mixed",
+            "listen": "127.0.0.1",
+            "listen_port": 2080
         }
-      }
-    },
-    {
-      "tag": "mixed-in",
-      "type": "mixed",
-      "listen": "127.0.0.1",
-      "listen_port": 7890
-    }
-  ],
+    ],
     "outbounds": [
         {
-            "tag": "🎯 全局直连",
+            "tag": "🎯 全球直连",
             "type": "direct"
         },
         {
