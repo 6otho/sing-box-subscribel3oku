@@ -43,14 +43,14 @@
             {
                 "tag": "DIRECT-DNS",
                 "type": "https",
-                "server": ["https://dns.alidns.com/dns-query"]: 443
+                "server": ["https://dns.alidns.com/dns-query"]:443
                 "domain_resolver": "local",
                 "detour": "🎯 全球直连"
             },
             {
                 "tag": "PROXY-DNS",
                 "type": "https",
-                "server": ["https://dns.alidns.com/dns-query"]: 443
+                "server": ["https://dns.alidns.com/dns-query"]:443
                 "domain_resolver": "local",
                 "detour": "🚀 节点选择"
             }
