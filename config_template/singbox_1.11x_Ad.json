@@ -20,14 +20,14 @@
   "dns": {
     "servers": [
       {
-        "tag": "localDns",
-        "address": "https://223.5.5.5/dns-query",
-        "detour": "direct"
-      },
-      {
         "tag": "proxyDns",
         "address": "tls://8.8.8.8",
         "detour": "🚀 Proxy"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
       }
     ],
     "rules": [
@@ -279,8 +279,18 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)hk|hongkong|hong kong|香港|港"
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(hk|香港|港)$",
+            "🇭🇰",
+            "HK",
+            "hk",
+            "HongKong",
+            "Hong\\s?Kong"
+          ]
+        }
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
@@ -292,8 +302,17 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)tw|taiwan|台湾|臺灣|台"
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(tw|台湾|臺灣|台)$",
+            "🇹🇼",
+            "TW",
+            "tw",
+            "Taiwan"
+          ]
+        }
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
@@ -305,8 +324,17 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)sg|singapore|新加坡|狮城"
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(sg|新加坡|狮城)$",
+            "🇸🇬",
+            "SG",
+            "sg",
+            "Singapore"
+          ]
+        }
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
@@ -318,8 +346,17 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)jp|japan|日本"
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(jp|日本)$",
+            "🇯🇵",
+            "JP",
+            "jp",
+            "Japan"
+          ]
+        }
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
@@ -331,8 +368,18 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)kr|korea|south korea|韩国"
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(kr|韩国)$",
+            "🇰🇷",
+            "KR",
+            "kr",
+            "Korea",
+            "South\\s?Korea"
+          ]
+        }
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
@@ -344,8 +391,17 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)us|united states|美国"
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(us|美国)$",
+            "🇺🇸",
+            "US",
+            "us",
+            "United\\s?States"
+          ]
+        }
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
@@ -357,8 +413,30 @@
       "outbounds": [
         "{all}"
       ],
-      "excludes": [
-        "(?i)hk|hongkong|香港|tw|taiwan|台湾|sg|singapore|新加坡|jp|japan|日本|kr|korea|韩国|us|united states|美国"
+      "filter": [
+        {
+          "action": "exclude",
+          "keywords": [
+            "HK",
+            "hk",
+            "香港",
+            "TW",
+            "tw",
+            "台湾",
+            "SG",
+            "sg",
+            "新加坡",
+            "JP",
+            "jp",
+            "日本",
+            "🇰🇷",
+            "KR",
+            "韩国",
+            "US",
+            "us",
+            "美国"
+          ]
+        }
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
@@ -377,7 +455,7 @@
         "rule_set": [
           "geosite-category-ads-all"
         ],
-        "outbound": "block"
+        "outbound": "🔈 AD blocking"
       },
       {
         "rule_set": [
@@ -404,10 +482,7 @@
         "outbound": "direct"
       },
       {
-        "rule_set": [
-          "geoip-private",
-          "geosite-private"
-        ],
+        "rule_set": ["geoip-private", "geosite-private"],
         "outbound": "direct"
       },
       {
@@ -415,7 +490,9 @@
         "outbound": "🤖 AI"
       },
       {
-        "rule_set": "geosite-youtube",
+        "rule_set": [
+          "geosite-youtube"
+        ],
         "outbound": "📺 Youtube"
       },
       {
@@ -535,7 +612,7 @@
       {
         "tag": "geoip-cn",
         "type": "remote",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
+        "url": "https://ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
         "format": "binary",
         "download_detour": "direct"
       },
