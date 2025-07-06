@@ -30,6 +30,102 @@
     "dns": {
         "servers": [
             {
+                "type": "local"
+            },
+            {
+                "type": "tcp",
+                "server": "1.1.1.1"
+            },
+            {
+                "type": "udp",
+                "server": "1.1.1.1"
+            },
+            {
+                "type": "tls",
+                "server": "1.1.1.1"
+            },
+            {
+                "type": "https",
+                "server": "1.1.1.1"
+            },
+            {
+                "type": "quic",
+                "server": "1.1.1.1"
+            },
+            {
+                "type": "h3",
+                "server": "1.1.1.1"
+            },
+            {
+                "type": "dhcp"
+            },
+            {
+                "type": "dhcp",
+                "interface": "en0"
+            },
+            {
+                "type": "udp",
+                "server": "1.1.1.1"
+            },
+            {
+                "type": "fakeip",
+                "tag": "fakeip",
+                "inet4_range": "198.18.0.0/15",
+                "inet6_range": "fc00::/18"
+            },
+            {
+                "type": "predefined",
+                "responses": [
+                    {
+                        "rcode": "REFUSED"
+                    }
+                ]
+            },
+            {
+                "type": "predefined",
+                "responses": [
+                    {
+                        "rcode": "REFUSED"
+                    }
+                ]
+            },
+            {
+                "type": "https",
+                "server": "dns.google",
+                "domain_resolver": "google"
+            },
+            {
+                "type": "udp",
+                "tag": "google",
+                "server": "1.1.1.1"
+            },
+            {
+                "type": "udp",
+                "server": "1.1.1.1"
+            },
+            {
+                "type": "udp",
+                "tag": "google",
+                "server": "8.8.8.8"
+            },
+            {
+                "type": "udp",
+                "server": "1.1.1.1"
+            },
+            {
+                "type": "udp",
+                "tag": "google",
+                "server": "8.8.8.8"
+            },
+            {
+                "type": "local",
+                "tag": "local"
+            },
+            {
+                "type": "local",
+                "tag": "local"
+            },
+            {
                 "tag": "FAKEIP-DNS",
                 "type": "fakeip",
                 "inet4_range": "198.18.0.0/15",
@@ -61,8 +157,25 @@
                     "A",
                     "AAAA"
                 ],
+                "server": "fakeip"
+            },
+            {
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
                 "server": "FAKEIP-DNS",
                 "rewrite_ttl": 1
+            },
+            {
+                "domain": "google.com",
+                "server": "google",
+                "strategy": "prefer_ipv6"
+            },
+            {
+                "domain": "google.com",
+                "server": "google",
+                "client_subnet": "1.1.1.1"
             },
             {
                 "outbound": "any",
@@ -88,7 +201,7 @@
         "disable_expire": true,
         "independent_cache": true,
         "final": "PROXY-DNS",
-        "strategy": "prefer_ipv4"
+        "strategy": "ipv4_only"
     },
     "inbounds": [
         {
@@ -121,6 +234,25 @@
         }
     ],
     "outbounds": [
+        {
+            "type": "socks",
+            "server": "example.org",
+            "server_port": 2080,
+            "domain_resolver": {
+                "server": "local",
+                "rewrite_ttl": 60,
+                "client_subnet": "1.1.1.1"
+            }
+        },
+        {
+            "type": "socks",
+            "server": "example.org",
+            "server_port": 2080,
+            "domain_resolver": {
+                "server": "local",
+                "strategy": "prefer_ipv4"
+            }
+        },
         {
             "tag": "🎯 全球直连",
             "type": "direct"
@@ -511,6 +643,11 @@
         }
     ],
     "route": {
+        "default_domain_resolver": {
+            "server": "local",
+            "rewrite_ttl": 60,
+            "client_subnet": "1.1.1.1"
+        },
         "auto_detect_interface": true,
         "final": "🚀 节点选择",
         "rules": [
