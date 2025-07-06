@@ -41,18 +41,20 @@
                 "detour": "🎯 全球直连"
             },
             {
-                "tag": "DIRECT-DNS",
                 "type": "https",
-                "server": ["https://dns.alidns.com/dns-query"]:443
-                "domain_resolver": "local",
-                "detour": "🎯 全球直连"
+                "tag": "DIRECT-DNS",
+                "detour": "🎯 全球直连",
+                "server_port": 443,
+                "server": "dns.alidns.com",
+                "domain_resolver": "local"
             },
             {
-                "tag": "PROXY-DNS",
                 "type": "https",
-                "server": ["https://dns.alidns.com/dns-query"]:443
-                "domain_resolver": "local",
-                "detour": "🚀 节点选择"
+                "tag": "PROXY-DNS",
+                "detour": "🚀 节点选择",
+                "server_port": 443,
+                "server": "dns.google",
+                "domain_resolver": "local"
             }
         ],
         "rules": [
