@@ -1,169 +1,169 @@
 {
-    "log": {
-        "disabled": false,
-        "level": "info",
-        "output": "",
-        "timestamp": true
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "output": "",
+    "timestamp": true
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "0.0.0.0:20123",
+      "external_ui": "ui",
+      "secret": "",
+      "default_mode": "rule",
+      "external_ui_download_url": "https://ghfast.top/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "🎯 全球直连",
+      "access_control_allow_origin": [
+        "http://127.0.0.1",
+        "http://localhost",
+        "https://yacd.metacubex.one",
+        "https://d.metacubex.one",
+        "https://board.zash.run.place"
+      ]
     },
-    "experimental": {
-        "clash_api": {
-            "external_controller": "0.0.0.0:20123",
-            "external_ui": "ui",
-            "secret": "",
-            "default_mode": "rule",
-            "external_ui_download_url": "https://ghfast.top/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
-            "external_ui_download_detour": "🎯 全球直连",
-            "access_control_allow_origin": [
-                "http://127.0.0.1",
-                "http://localhost",
-                "https://yacd.metacubex.one",
-                "https://d.metacubex.one",
-                "https://board.zash.run.place"
-            ]
-        },
-        "cache_file": {
-            "enabled": true,
-            "path": "cache.db",
-            "store_fakeip": true
-        }
-    },
-    "dns": {
-        "servers": [
-            {
-                "tag": "FAKEIP-DNS",
-                "type": "fakeip",
-                "inet4_range": "198.18.0.0/15",
-                "inet6_range": "fc00::/18"
-            },
-            {
-                "tag": "local",
-                "type": "local",
-                "detour": "🎯 全球直连"
-            },
-            {
-                "tag": "DIRECT-DNS",
-                "type": "httpss",
-                "server": "https://dns.alidns.com/dns-query",
-                "domain_resolver": "local",
-                "detour": "🎯 全球直连"
-            },
-            {
-                "tag": "PROXY-DNS",
-                "type": "httpss",
-                "server": "https://dns.google/dns-query",
-                "domain_resolver": "local",
-                "detour": "🚀 节点选择"
-            }
-        ],
-        "rules": [
-            {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "server": "FAKEIP-DNS",
-                "rewrite_ttl": 1
-            },
-            {
-                "outbound": "any",
-                "server": "DIRECT-DNS"
-            },
-            {
-                "clash_mode": "direct",
-                "server": "DIRECT-DNS"
-            },
-            {
-                "clash_mode": "global",
-                "server": "PROXY-DNS"
-            },
-            {
-                "rule_set": [
-                    "geosite-cn",
-                    "geosite-private"
-                ],
-                "server": "DIRECT-DNS"
-            }
-        ],
-        "disable_cache": true,
-        "disable_expire": true,
-        "independent_cache": true,
-        "final": "PROXY-DNS",
-        "strategy": "ipv4_only"
-    },
-    "inbounds": [
-        {
-            "tag": "tun-in",
-            "type": "tun",
-            "address": [
-                "172.19.0.1/30"
-            ],
-            "route_address": [
-                "0.0.0.0/0"
-            ],
-            "route_exclude_address": [
-                "192.168.0.0/16"
-            ],
-            "mtu": 9000,
-            "stack": "system",
-            "platform": {
-                "http_proxy": {
-                    "enabled": true,
-                    "server": "127.0.0.1",
-                    "server_port": 2080
-                }
-            }
-        },
-        {
-            "tag": "mixed-in",
-            "type": "mixed",
-            "listen": "127.0.0.1",
-            "listen_port": 2080
-        }
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "store_fakeip": true
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "FAKEIP-DNS",
+        "type": "fakeip",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
+      },
+      {
+        "tag": "local",
+        "type": "local",
+        "detour": "🎯 全球直连"
+      },
+      {
+        "tag": "DIRECT-DNS",
+        "type": "https",
+        "server": "https://dns.alidns.com/dns-query",
+        "domain_resolver": "local",
+        "detour": "🎯 全球直连"
+      },
+      {
+        "tag": "PROXY-DNS",
+        "type": "https",
+        "server": "https://dns.google/dns-query",
+        "domain_resolver": "local",
+        "detour": "🚀 节点选择"
+      }
     ],
-    "outbounds": [
-        {
-            "type": "socks",
-            "server": "example.org",
-            "server_port": 2080,
-            "domain_resolver": {
-                "server": "local",
-                "rewrite_ttl": 60,
-                "client_subnet": "1.1.1.1"
-            }
-        },
-        {
-            "type": "socks",
-            "server": "example.org",
-            "server_port": 2080,
-            "domain_resolver": {
-                "server": "local",
-                "strategy": "prefer_ipv4"
-            }
-        },
-        {
-            "tag": "🎯 全球直连",
-            "type": "direct"
-        },
-        {
-            "tag": "🚫 拒绝连接",
-            "type": "block"
-        },
-        {
-            "tag": "🚀 节点选择",
-            "type": "selector",
-            "interrupt_exist_connections": true,
-            "outbounds": [
-                "{all}",
-                "🇭🇰 香港自动",
-                "🇨🇳 台湾自动",
-                "🇸🇬 新加坡自动",
-                "🇯🇵 日本自动",
-                "🇰🇷 韩国自动",
-                "🇺🇸 美国自动",
-                "🌐 全球自动"
-            ],
-            "default": "🇸🇬 新加坡自动"
-        },
+    "rules": [
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "FAKEIP-DNS",
+        "rewrite_ttl": 1
+      },
+      {
+        "outbound": "any",
+        "server": "DIRECT-DNS"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "DIRECT-DNS"
+      },
+      {
+        "clash_mode": "global",
+        "server": "PROXY-DNS"
+      },
+      {
+        "rule_set": [
+          "geosite-cn",
+          "geosite-private"
+        ],
+        "server": "DIRECT-DNS"
+      }
+    ],
+    "disable_cache": true,
+    "disable_expire": true,
+    "independent_cache": true,
+    "final": "PROXY-DNS",
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "tag": "tun-in",
+      "type": "tun",
+      "address": [
+        "172.19.0.1/30"
+      ],
+      "route_address": [
+        "0.0.0.0/0"
+      ],
+      "route_exclude_address": [
+        "192.168.0.0/16"
+      ],
+      "mtu": 9000,
+      "stack": "system",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
+      }
+    },
+    {
+      "tag": "mixed-in",
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "socks",
+      "server": "example.org",
+      "server_port": 2080,
+      "domain_resolver": {
+        "server": "local",
+        "rewrite_ttl": 60,
+        "client_subnet": "1.1.1.1"
+      }
+    },
+    {
+      "type": "socks",
+      "server": "example.org",
+      "server_port": 2080,
+      "domain_resolver": {
+        "server": "local",
+        "strategy": "prefer_ipv4"
+      }
+    },
+    {
+      "tag": "🎯 全球直连",
+      "type": "direct"
+    },
+    {
+      "tag": "🚫 拒绝连接",
+      "type": "block"
+    },
+    {
+      "tag": "🚀 节点选择",
+      "type": "selector",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "{all}",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇰🇷 韩国自动",
+        "🇺🇸 美国自动",
+        "🌐 全球自动"
+      ],
+      "default": "🇸🇬 新加坡自动"
+    },
         {
             "tag": "🌵 手动选择",
             "type": "selector",
@@ -530,158 +530,114 @@
         }
     ],
     "route": {
-        "default_domain_resolver": {
-            "server": "local",
-            "rewrite_ttl": 60,
-            "client_subnet": "1.1.1.1"
-        },
-        "auto_detect_interface": true,
-        "final": "🚀 节点选择",
-        "rules": [
-            {
-                "action": "sniff"
-            },
-            {
-                "protocol": "dns",
-                "action": "hijack-dns"
-            },
-            {
-                "ip_is_private": true,
-                "outbound": "🎯 全球直连"
-            },
-            {
-                "clash_mode": "direct",
-                "outbound": "🎯 全球直连"
-            },
-            {
-                "clash_mode": "global",
-                "outbound": "↪️ 出站模式"
-            },
-            {
-                "domain": [
-                    "cdn.jsdmirror.com"
-                ],
-                "outbound": "🎯 全球直连"
-            },
-            {
-                "rule_set": "geosite-category-ads-all",
-                "action": "reject"
-            },
-            {
-                "type": "logical",
-                "mode": "or",
-                "rules": [
-                    {
-                        "port": [
-                            3478
-                        ]
-                    },
-                    {
-                        "network": [
-                            "tcp"
-                        ],
-                        "port": [
-                            5349
-                        ]
-                    },
-                    {
-                        "network": [
-                            "udp"
-                        ],
-                        "port": [
-                            5350,
-                            5351,
-                            19302
-                        ]
-                    },
-                    {
-                        "rule_set": [
-                            "STUN"
-                        ]
-                    }
-                ],
-                "outbound": "💧 泄漏拦截"
-            },
-            {
-                "rule_set": [
-                    "BlockHttpDNS"
-                ],
-                "outbound": "🔎 HttpDNS"
-            },
-            {
-                "rule_set": [
-                    "geoip-google",
-                    "geosite-google"
-                ],
-                "outbound": "🔍 Google"
-            },
-            {
-                "rule_set": "geosite-ai",
-                "outbound": "🤖 AI"
-            },
-            {
-                "rule_set": "geosite-youtube",
-                "outbound": "📹 YouTube"
-            },
-            {
-                "rule_set": "geosite-tiktok",
-                "outbound": "🎵 TikTok"
-            },
-            {
-                "rule_set": "geosite-line",
-                "outbound": "🧸 Line"
-            },
-            {
-                "rule_set": [
-                    "geoip-telegram",
-                    "geosite-telegram"
-                ],
-                "outbound": "📲 Telegram"
-            },
-            {
-                "rule_set": [
-                    "geoip-netflix",
-                    "geosite-netflix"
-                ],
-                "outbound": "🎥 Netflix"
-            },
-            {
-                "rule_set": [
-                    "geosite-microsoft"
-                ],
-                "outbound": "📖 Microsoft"
-            },
-            {
-                "rule_set": [
-                    "geoip-apple",
-                    "geosite-apple"
-                ],
-                "outbound": "🍎 Apple"
-            },
-            {
-                "rule_set": [
-                    "geoip-cn",
-                    "geosite-cn",
-                    "geosite-private"
-                ],
-                "outbound": "🎯 全球直连"
-            }
+    "default_domain_resolver": {
+      "server": "local",
+      "rewrite_ttl": 60,
+      "client_subnet": "1.1.1.1"
+    },
+    "auto_detect_interface": true,
+    "final": "🚀 节点选择",
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "↪️ 出站模式"
+      },
+      {
+        "domain": [
+          "cdn.jsdmirror.com"
         ],
-        "rule_set": [
-            {
-                "tag": "geosite-private",
-                "type": "remote",
-                "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
-                "format": "binary",
-                "download_detour": "🎯 全球直连"
-            },
-            {
-                "tag": "geosite-cn",
-                "type": "remote",
-                "url": "https://gh.ikuu.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
-                "format": "binary",
-                "download_detour": "🎯 全球直连"
-            },
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "action": "reject"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          { "port": [3478] },
+          { "network": ["tcp"], "port": [5349] },
+          { "network": ["udp"], "port": [5350, 5351, 19302] },
+          { "rule_set": ["STUN"] }
+        ],
+        "outbound": "💧 泄漏拦截"
+      },
+      {
+        "rule_set": ["BlockHttpDNS"],
+        "outbound": "🔎 HttpDNS"
+      },
+      {
+        "rule_set": ["geoip-google","geosite-google"],
+        "outbound": "🔍 Google"
+      },
+      {
+        "rule_set": "geosite-ai",
+        "outbound": "🤖 AI"
+      },
+      {
+        "rule_set": "geosite-youtube",
+        "outbound": "📹 YouTube"
+      },
+      {
+        "rule_set": "geosite-tiktok",
+        "outbound": "🎵 TikTok"
+      },
+      {
+        "rule_set": "geosite-line",
+        "outbound": "🧸 Line"
+      },
+      {
+        "rule_set": ["geoip-telegram","geosite-telegram"],
+        "outbound": "📲 Telegram"
+      },
+      {
+        "rule_set": ["geoip-netflix","geosite-netflix"],
+        "outbound": "🎥 Netflix"
+      },
+      {
+        "rule_set": ["geosite-microsoft"],
+        "outbound": "📖 Microsoft"
+      },
+      {
+        "rule_set": ["geoip-apple","geosite-apple"],
+        "outbound": "🍎 Apple"
+      },
+      {
+        "rule_set": ["geoip-cn","geosite-cn","geosite-private"],
+        "outbound": "🎯 全球直连"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-private",
+        "type": "remote",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
+        "format": "binary",
+        "download_detour": "🎯 全球直连"
+      },
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "url": "https://gh.ikuu.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
+        "format": "binary",
+        "download_detour": "🎯 全球直连"
+      },
             {
                 "tag": "geosite-category-ads-all",
                 "type": "remote",
