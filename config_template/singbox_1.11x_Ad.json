@@ -95,10 +95,21 @@
         {
             "tag": "tun-in",
             "type": "tun",
-            "inet4_address": "172.19.0.1/30",
+            "address": [
+                "172.19.0.1/30",
+                "fdfe:dcba:9876::1/126"
+            ],
+            "route_address": [
+                "0.0.0.0/1",
+                "128.0.0.0/1",
+                "::/1",
+                "8000::/1"
+            ],
+            "route_exclude_address": [
+                "192.168.0.0/16",
+                "fc00::/7"
+            ],
             "mtu": 9000,
-            "auto_route": true,
-            "strict_route": true,
             "stack": "system",
             "sniff": true,
             "platform": {
@@ -340,179 +351,182 @@
             ]
         },
         {
-      "tag": "🇭🇰 香港自动",
-      "type": "urltest",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
+            "tag": "🇭🇰 香港自动",
+            "type": "urltest",
+            "outbounds": [
+                "{all}"
+            ],
+            "filter": [
+                {
+                    "action": "include",
+                    "keywords": [
+                        "^.*\\.(hk|香港|港)$",
+                        "🇭🇰",
+                        "HK",
+                        "hk",
+                        "HongKong",
+                        "Hong\\s?Kong"
+                    ]
+                }
+            ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
-          "action": "include",
-          "keywords": [
-            "^.*\\.(hk|香港|港)$",
-            "🇭🇰",
-            "HK",
-            "hk",
-            "HongKong",
-            "Hong\\s?Kong"
-          ]
-        }
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🇨🇳 台湾自动",
-      "type": "urltest",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
+            "tag": "🇨🇳 台湾自动",
+            "type": "urltest",
+            "outbounds": [
+                "{all}"
+            ],
+            "filter": [
+                {
+                    "action": "include",
+                    "keywords": [
+                        "^.*\\.(tw|台湾|臺灣|台)$",
+                        "🇹🇼",
+                        "TW",
+                        "tw",
+                        "Taiwan"
+                    ]
+                }
+            ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
-          "action": "include",
-          "keywords": [
-            "^.*\\.(tw|台湾|臺灣|台)$",
-            "🇹🇼",
-            "TW",
-            "tw",
-            "Taiwan"
-          ]
-        }
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🇸🇬 新加坡自动",
-      "type": "urltest",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
+            "tag": "🇸🇬 新加坡自动",
+            "type": "urltest",
+            "outbounds": [
+                "{all}"
+            ],
+            "filter": [
+                {
+                    "action": "include",
+                    "keywords": [
+                        "^.*\\.(sg|新加坡|狮城)$",
+                        "🇸🇬",
+                        "SG",
+                        "sg",
+                        "Singapore"
+                    ]
+                }
+            ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
-          "action": "include",
-          "keywords": [
-            "^.*\\.(sg|新加坡|狮城)$",
-            "🇸🇬",
-            "SG",
-            "sg",
-            "Singapore"
-          ]
-        }
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🇯🇵 日本自动",
-      "type": "urltest",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
+            "tag": "🇯🇵 日本自动",
+            "type": "urltest",
+            "outbounds": [
+                "{all}"
+            ],
+            "filter": [
+                {
+                    "action": "include",
+                    "keywords": [
+                        "^.*\\.(jp|日本)$",
+                        "🇯🇵",
+                        "JP",
+                        "jp",
+                        "Japan"
+                    ]
+                }
+            ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
-          "action": "include",
-          "keywords": [
-            "^.*\\.(jp|日本)$",
-            "🇯🇵",
-            "JP",
-            "jp",
-            "Japan"
-          ]
-        }
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🇰🇷 韩国自动",
-      "type": "urltest",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
+            "tag": "🇰🇷 韩国自动",
+            "type": "urltest",
+            "outbounds": [
+                "{all}"
+            ],
+            "filter": [
+                {
+                    "action": "include",
+                    "keywords": [
+                        "^.*\\.(kr|韩国)$",
+                        "🇰🇷",
+                        "KR",
+                        "kr",
+                        "Korea",
+                        "South\\s?Korea"
+                    ]
+                }
+            ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
-          "action": "include",
-          "keywords": [
-            "^.*\\.(kr|韩国)$",
-            "🇰🇷",
-            "KR",
-            "kr",
-            "Korea",
-            "South\\s?Korea"
-          ]
-        }
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🇺🇸 美国自动",
-      "type": "urltest",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
+            "tag": "🇺🇸 美国自动",
+            "type": "urltest",
+            "outbounds": [
+                "{all}"
+            ],
+            "filter": [
+                {
+                    "action": "include",
+                    "keywords": [
+                        "^.*\\.(us|美国)$",
+                        "🇺🇸",
+                        "US",
+                        "us",
+                        "United\\s?States"
+                    ]
+                }
+            ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
-          "action": "include",
-          "keywords": [
-            "^.*\\.(us|美国)$",
-            "🇺🇸",
-            "US",
-            "us",
-            "United\\s?States"
-          ]
+            "tag": "🌐 全球自动",
+            "type": "urltest",
+            "outbounds": [
+                "{all}"
+            ],
+            "filter": [
+                {
+                    "action": "exclude",
+                    "keywords": [
+                        "HK",
+                        "hk",
+                        "香港",
+                        "TW",
+                        "tw",
+                        "台湾",
+                        "SG",
+                        "sg",
+                        "新加坡",
+                        "JP",
+                        "jp",
+                        "日本",
+                        "🇰🇷",
+                        "KR",
+                        "韩国",
+                        "US",
+                        "us",
+                        "美国"
+                    ]
+                }
+            ]
         }
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 50
-    },
-    {
-      "tag": "🌐 全球自动",
-      "type": "urltest",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
-        {
-          "action": "exclude",
-          "keywords": [
-            "HK",
-            "hk",
-            "香港",
-            "TW",
-            "tw",
-            "台湾",
-            "SG",
-            "sg",
-            "新加坡",
-            "JP",
-            "jp",
-            "日本",
-            "🇰🇷",
-            "KR",
-            "韩国",
-            "US",
-            "us",
-            "美国"
-          ]
-        }
-      ]
-    }
-  ],
+    ],
     "route": {
         "auto_detect_interface": true,
         "final": "🚀 节点选择",
         "rules": [
             {
+                "action": "sniff"
+            },
+            {
                 "protocol": "dns",
-                "outbound": "dns-out"
+                "action": "hijack-dns"
             },
             {
                 "ip_is_private": true,
@@ -534,7 +548,7 @@
             },
             {
                 "rule_set": "geosite-category-ads-all",
-                "outbound": "🔈 广告拦截"
+                "action": "reject"
             },
             {
                 "type": "logical",
