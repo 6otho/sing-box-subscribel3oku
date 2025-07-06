@@ -126,10 +126,6 @@
       "type": "block"
     },
     {
-      "tag": "dns-out",
-      "type": "dns-out"
-    },
-    {
       "tag": "🚀 Proxy",
       "type": "selector",
       "outbounds": [
