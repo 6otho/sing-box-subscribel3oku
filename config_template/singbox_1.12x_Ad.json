@@ -30,102 +30,6 @@
     "dns": {
         "servers": [
             {
-                "type": "local"
-            },
-            {
-                "type": "tcp",
-                "server": "1.1.1.1"
-            },
-            {
-                "type": "udp",
-                "server": "1.1.1.1"
-            },
-            {
-                "type": "tls",
-                "server": "1.1.1.1"
-            },
-            {
-                "type": "https",
-                "server": "1.1.1.1"
-            },
-            {
-                "type": "quic",
-                "server": "1.1.1.1"
-            },
-            {
-                "type": "h3",
-                "server": "1.1.1.1"
-            },
-            {
-                "type": "dhcp"
-            },
-            {
-                "type": "dhcp",
-                "interface": "en0"
-            },
-            {
-                "type": "udp",
-                "server": "1.1.1.1"
-            },
-            {
-                "type": "fakeip",
-                "tag": "fakeip",
-                "inet4_range": "198.18.0.0/15",
-                "inet6_range": "fc00::/18"
-            },
-            {
-                "type": "predefined",
-                "responses": [
-                    {
-                        "rcode": "REFUSED"
-                    }
-                ]
-            },
-            {
-                "type": "predefined",
-                "responses": [
-                    {
-                        "rcode": "REFUSED"
-                    }
-                ]
-            },
-            {
-                "type": "https",
-                "server": "dns.google",
-                "domain_resolver": "google"
-            },
-            {
-                "type": "udp",
-                "tag": "google",
-                "server": "1.1.1.1"
-            },
-            {
-                "type": "udp",
-                "server": "1.1.1.1"
-            },
-            {
-                "type": "udp",
-                "tag": "google",
-                "server": "8.8.8.8"
-            },
-            {
-                "type": "udp",
-                "server": "1.1.1.1"
-            },
-            {
-                "type": "udp",
-                "tag": "google",
-                "server": "8.8.8.8"
-            },
-            {
-                "type": "local",
-                "tag": "local"
-            },
-            {
-                "type": "local",
-                "tag": "local"
-            },
-            {
                 "tag": "FAKEIP-DNS",
                 "type": "fakeip",
                 "inet4_range": "198.18.0.0/15",
@@ -138,14 +42,14 @@
             },
             {
                 "tag": "DIRECT-DNS",
-                "type": "https",
+                "type": "httpss",
                 "server": "https://dns.alidns.com/dns-query",
                 "domain_resolver": "local",
                 "detour": "🎯 全球直连"
             },
             {
                 "tag": "PROXY-DNS",
-                "type": "https",
+                "type": "httpss",
                 "server": "https://dns.google/dns-query",
                 "domain_resolver": "local",
                 "detour": "🚀 节点选择"
@@ -157,25 +61,8 @@
                     "A",
                     "AAAA"
                 ],
-                "server": "fakeip"
-            },
-            {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
                 "server": "FAKEIP-DNS",
                 "rewrite_ttl": 1
-            },
-            {
-                "domain": "google.com",
-                "server": "google",
-                "strategy": "prefer_ipv6"
-            },
-            {
-                "domain": "google.com",
-                "server": "google",
-                "client_subnet": "1.1.1.1"
             },
             {
                 "outbound": "any",
@@ -904,22 +791,7 @@
                 "tag": "geoip-cn",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs",
-                "download_detour": "🎯 全球直连"
-            },
-            {
-                "tag": "STUN",
-                "type": "remote",
-                "url": "https://gh-proxy.com/https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/STUN/STUN.srs",
-                "format": "binary",
-                "download_detour": "🎯 全球直连"
-            },
-            {
-                "tag": "BlockHttpDNS",
-                "type": "remote",
-                "url": "https://gh-proxy.com/https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/BlockHttpDNS/BlockHttpDNS.srs",
-                "format": "binary",
-                "download_detour": "🎯 全球直连"
+                "url": ""
             }
         ]
     }
