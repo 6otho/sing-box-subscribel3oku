@@ -85,10 +85,6 @@
       "type": "direct"
     },
     {
-      "tag": "reject",
-      "type": "reject"
-    },
-    {
       "tag": "dns-out",
       "type": "dns"
     },
