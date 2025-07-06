@@ -59,7 +59,6 @@
     {
       "tag": "tun-in",
       "type": "tun",
-      "interface_name": "tun0",
       "inet4_address": "172.19.0.1/30",
       "mtu": 9000,
       "auto_route": true,
@@ -290,9 +289,14 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)HK|Hong Kong|香港|港"
-      ],
+      "filter": {
+        "regex": [
+          "(?i)HK",
+          "(?i)Hong Kong",
+          "香港",
+          "港"
+        ]
+      },
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -303,9 +307,15 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)TW|Taiwan|台湾|臺灣|台"
-      ],
+      "filter": {
+        "regex": [
+          "(?i)TW",
+          "(?i)Taiwan",
+          "台湾",
+          "臺灣",
+          "台"
+        ]
+      },
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -316,9 +326,14 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)SG|Singapore|新加坡|狮城"
-      ],
+      "filter": {
+        "regex": [
+          "(?i)SG",
+          "(?i)Singapore",
+          "新加坡",
+          "狮城"
+        ]
+      },
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -329,9 +344,13 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)JP|Japan|日本"
-      ],
+      "filter": {
+        "regex": [
+          "(?i)JP",
+          "(?i)Japan",
+          "日本"
+        ]
+      },
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -342,9 +361,13 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)KR|Korea|韩国"
-      ],
+      "filter": {
+        "regex": [
+          "(?i)KR",
+          "(?i)Korea",
+          "韩国"
+        ]
+      },
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -355,9 +378,13 @@
       "outbounds": [
         "{all}"
       ],
-      "includes": [
-        "(?i)US|United States|美国"
-      ],
+      "filter": {
+        "regex": [
+          "(?i)US",
+          "(?i)United States",
+          "美国"
+        ]
+      },
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -368,9 +395,19 @@
       "outbounds": [
         "{all}"
       ],
-      "excludes": [
-        "(?i)HK|Hong Kong|香港|港|TW|Taiwan|台湾|臺灣|台|SG|Singapore|新加坡|狮城|JP|Japan|日本|KR|Korea|韩国|US|United States|美国"
-      ]
+      "filter": {
+        "exclude_regex": [
+          "(?i)HK", "香港",
+          "(?i)TW", "台湾",
+          "(?i)SG", "新加坡",
+          "(?i)JP", "日本",
+          "(?i)KR", "韩国",
+          "(?i)US", "美国"
+        ]
+      },
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
     }
   ],
   "route": {
@@ -397,17 +434,16 @@
         "mode": "or",
         "rules": [
           {
-            "port": [
-              3478,
-              5349
+            "port_range": [
+              "3478",
+              "5349"
             ]
           },
           {
             "network": "udp",
-            "port": [
-              19302,
-              5350,
-              5351
+            "port_range": [
+              "19302",
+              "5350-5351"
             ]
           },
           {
