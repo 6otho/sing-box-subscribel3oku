@@ -32,12 +32,6 @@
     ],
     "rules": [
       {
-        "outbound": [
-      {
-        "any",
-        "reject",
-        }
-     ],
         "server": "localDns"
       },
       {
@@ -480,13 +474,7 @@
         "rule_set": [
           "geosite-category-ads-all"
         ],
-        "action": "reject"
-      },
-      {
-        "rule_set": [
-          "geosite-category-ads-all"
-        ],
-        "outbound": "🚀 Proxy"
+        "outbound": "reject" 
       },
       {
         "rule_set": [
@@ -812,7 +800,7 @@
         "tag": "geosite-emby",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Emby/Emby.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/senshinya/singbox_ruleset/main/rule/Emby/Emby.srs",
         "download_detour": "direct"
       },
       {
