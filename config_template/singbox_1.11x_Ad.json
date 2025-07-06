@@ -441,6 +441,26 @@
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
+    },
+    {
+      "tag": "💧 Leak interception",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct",
+        "🚀 Proxy"
+      ],
+      "default": "block"
+    },
+    {
+      "tag": "🔎 HttpDNS",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct",
+        "🚀 Proxy"
+      ],
+      "default": "block"
     }
   ],
   "route": {
@@ -581,6 +601,20 @@
           "geosite-amazon"
         ],
         "outbound": "🚀 Proxy"
+      },
+      {
+        "rule_set": [
+          "geosite-google",
+          "geosite-category-ads-all"
+        ],
+        "outbound": "🔎 HttpDNS"
+      },
+      {
+        "process_name": [
+          "steam.exe",
+          "wechat.exe"
+        ],
+        "outbound": "💧 Leak interception"
       },
       {
         "rule_set": "geosite-geolocation-!cn",
