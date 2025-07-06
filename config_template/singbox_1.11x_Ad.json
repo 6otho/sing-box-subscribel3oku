@@ -3,13 +3,15 @@
     "level": "info",
     "timestamp": true
   },
-  "clash_api": {
-    "external_controller": "127.0.0.1:9090",
-    "external_ui": "ui",
-    "secret": "",
-    "external_ui_download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/metacubexd@gh-pages/gh-pages.zip",
-    "external_ui_download_detour": "direct",
-    "default_mode": "rule"
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "secret": "",
+      "external_ui_download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/metacubexd@gh-pages/gh-pages.zip",
+      "external_ui_download_detour": "direct",
+      "default_mode": "rule"
+    }
   },
   "cache_file": {
     "enabled": true,
@@ -151,6 +153,20 @@
       "default": "🇭🇰 HK AUTO"
     },
     {
+      "tag": "📺 Youtube",
+      "type": "selector",
+      "outbounds": [
+        "🇸🇬 SG AUTO",
+        "🇭🇰 HK AUTO",
+        "🇨🇳 TW AUTO",
+        "🇯🇵 JP AUTO",
+        "🇰🇷 KR AUTO",
+        "🇺🇸 US AUTO",
+        "🌐 Global"
+      ],
+      "default": "🇭🇰 HK AUTO"
+    },
+    {
       "tag": "💬 Telegram",
       "type": "selector",
       "outbounds": [
@@ -223,25 +239,40 @@
     {
       "tag": "🇨🇳 China",
       "type": "selector",
-      "outbounds": ["direct", "🚀 Proxy"],
+      "outbounds": [
+        "direct",
+        "🚀 Proxy"
+      ],
       "default": "direct"
     },
     {
       "tag": "🔈 广告拦截",
       "type": "selector",
-      "outbounds": ["block", "direct", "🚀 Proxy"],
+      "outbounds": [
+        "block",
+        "direct",
+        "🚀 Proxy"
+      ],
       "default": "block"
     },
     {
       "tag": "💧 泄漏拦截",
       "type": "selector",
-      "outbounds": ["block", "direct", "🚀 Proxy"],
+      "outbounds": [
+        "block",
+        "direct",
+        "🚀 Proxy"
+      ],
       "default": "block"
     },
     {
       "tag": "🔎 HttpDNS",
       "type": "selector",
-      "outbounds": ["block", "direct", "🚀 Proxy"],
+      "outbounds": [
+        "block",
+        "direct",
+        "🚀 Proxy"
+      ],
       "default": "block"
     },
     {
@@ -633,7 +664,7 @@
         "download_detour": "direct"
       },
       {
-        "tag": "geosite-bilibili",
+        "tag": "geosite-bilibili",  
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili.srs",
@@ -671,8 +702,7 @@
         "tag": "geosite-netflix",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/netflix.srs",
-        "download_detour": "direct"
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/netflix.srs",        "download_detour": "direct"
       },
       {
         "tag": "geosite-disney",
