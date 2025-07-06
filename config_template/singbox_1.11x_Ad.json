@@ -10,7 +10,7 @@
       "secret": "",
       "external_ui_download_url": "https://gh-proxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "direct",
-      "default_mode": "规则"
+      "default_mode": "rule"
     },
     "cache_file": {
       "enabled": true,
@@ -40,11 +40,11 @@
         "server": "localDns"
       },
       {
-        "clash_mode": "直连",
+        "clash_mode": "direct",
         "server": "localDns"
       },
       {
-        "clash_mode": "全局",
+        "clash_mode": "global",
         "server": "proxyDns"
       },
       {
@@ -449,20 +449,20 @@
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "clash_mode": "规则",
+        "clash_mode": "rule",
         "action": "reject"
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "clash_mode": "全局",
+        "clash_mode": "global",
         "outbound": "🚀 Proxy"
       },
       {
-        "clash_mode": "直连",
+        "clash_mode": "direct",
         "outbound": "direct"
       },
       {
-        "clash_mode": "全局",
+        "clash_mode": "global",
         "outbound": "🚀 Proxy"
       },
       {
