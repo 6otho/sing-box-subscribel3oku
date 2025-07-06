@@ -42,14 +42,14 @@
             },
             {
                 "tag": "DIRECT-DNS",
-                "type": "httpss",
+                "type": "https",
                 "server": "https://dns.alidns.com/dns-query",
                 "domain_resolver": "local",
                 "detour": "🎯 全球直连"
             },
             {
                 "tag": "PROXY-DNS",
-                "type": "httpss",
+                "type": "https",
                 "server": "https://dns.google/dns-query",
                 "domain_resolver": "local",
                 "detour": "🚀 节点选择"
