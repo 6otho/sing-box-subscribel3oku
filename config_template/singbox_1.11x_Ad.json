@@ -121,16 +121,6 @@
       "tag": "🚀 Proxy",
       "type": "selector",
       "outbounds": [
-        "auto",
-        "direct",
-        "block",
-        "{all}"
-      ]
-    },
-    {
-      "tag": "🚀 Proxy",
-      "type": "selector",
-      "outbounds": [
         "{all}",
         "🇭🇰 HK AUTO",
         "🇨🇳 TW AUTO",
