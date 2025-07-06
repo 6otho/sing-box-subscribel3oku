@@ -488,7 +488,7 @@
           "BlockHttpDNS",
           "STUN"
         ],
-        "action": "reject"
+        "outbound": "reject"
       },
       {
         "clash_mode": "direct",
