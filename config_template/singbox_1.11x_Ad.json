@@ -259,7 +259,7 @@
       "tag": "🔈 AD blocking",
       "type": "selector",
       "outbounds": [
-        "block",
+        "reject",
         "direct",
         "🚀 Proxy"
       ],
