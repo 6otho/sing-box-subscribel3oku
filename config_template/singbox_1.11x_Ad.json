@@ -479,6 +479,12 @@
       },
       {
         "rule_set": [
+          "geosite-category-ads-all"
+        ],
+        "outbound": "🚀 Proxy"
+      },
+      {
+        "rule_set": [
           "BlockHttpDNS",
           "STUN"
         ],
