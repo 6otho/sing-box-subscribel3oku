@@ -153,20 +153,6 @@
       "default": "🇭🇰 HK AUTO"
     },
     {
-      "tag": "📺 Youtube",
-      "type": "selector",
-      "outbounds": [
-        "🇸🇬 SG AUTO",
-        "🇭🇰 HK AUTO",
-        "🇨🇳 TW AUTO",
-        "🇯🇵 JP AUTO",
-        "🇰🇷 KR AUTO",
-        "🇺🇸 US AUTO",
-        "🌐 Global"
-      ],
-      "default": "🇭🇰 HK AUTO"
-    },
-    {
       "tag": "💬 Telegram",
       "type": "selector",
       "outbounds": [
@@ -239,40 +225,25 @@
     {
       "tag": "🇨🇳 China",
       "type": "selector",
-      "outbounds": [
-        "direct",
-        "🚀 Proxy"
-      ],
+      "outbounds": ["direct", "🚀 Proxy"],
       "default": "direct"
     },
     {
       "tag": "🔈 广告拦截",
       "type": "selector",
-      "outbounds": [
-        "block",
-        "direct",
-        "🚀 Proxy"
-      ],
+      "outbounds": ["block", "direct", "🚀 Proxy"],
       "default": "block"
     },
     {
       "tag": "💧 泄漏拦截",
       "type": "selector",
-      "outbounds": [
-        "block",
-        "direct",
-        "🚀 Proxy"
-      ],
+      "outbounds": ["block", "direct", "🚀 Proxy"],
       "default": "block"
     },
     {
       "tag": "🔎 HttpDNS",
       "type": "selector",
-      "outbounds": [
-        "block",
-        "direct",
-        "🚀 Proxy"
-      ],
+      "outbounds": ["block", "direct", "🚀 Proxy"],
       "default": "block"
     },
     {
@@ -408,10 +379,10 @@
         "type": "logical",
         "mode": "or",
         "rules": [
-          {"port": 3478},
-          {"network": "tcp", "port": 5349},
-          {"network": "udp", "port": [5350, 5351, 19302]},
-          {"rule_set": ["STUN"]}
+          { "port": 3478 },
+          { "network": "tcp", "port": 5349 },
+          { "network": "udp", "port": [5350, 5351, 19302] },
+          { "rule_set": ["STUN"] }
         ],
         "outbound": "💧 泄漏拦截"
       },
@@ -527,7 +498,11 @@
         "outbound": "🚀 Proxy"
       },
       {
-        "rule_set": ["geosite-category-games", "geosite-dmm", "geosite-steam"],
+        "rule_set": [
+          "geosite-category-games",
+          "geosite-dmm",
+          "geosite-steam"
+        ],
         "outbound": "🎮 Games"
       },
       {
@@ -592,8 +567,7 @@
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
         "download_detour": "direct"
-      },
-      {
+      },      {
         "tag": "geosite-openai",
         "type": "remote",
         "format": "binary",
@@ -664,7 +638,7 @@
         "download_detour": "direct"
       },
       {
-        "tag": "geosite-bilibili",  
+        "tag": "geosite-bilibili",
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili.srs",
@@ -702,7 +676,8 @@
         "tag": "geosite-netflix",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/netflix.srs",        "download_detour": "direct"
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/netflix.srs",
+        "download_detour": "direct"
       },
       {
         "tag": "geosite-disney",
