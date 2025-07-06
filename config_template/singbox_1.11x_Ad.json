@@ -74,7 +74,7 @@
                 "server": "DIRECT-DNS"
             },
             {
-                "clash_mode": "全球自动",
+                "clash_mode": "global",
                 "server": "PROXY-DNS"
             },
             {
