@@ -70,8 +70,7 @@
             "rule_set": ["geoip-cn"]
           }
         ],
-        "server": "google",
-        "client_subnet": "114.114.114.114/24"
+        "server": "google"
       },
       {
         "query_type": ["A", "AAAA"],
@@ -251,8 +250,7 @@
       "outbounds": ["{all}"],
       "filter": {
         "include": [
-          "^.*\\.(hk|香港|港)$",
-          "🇭🇰",
+          "香港",
           "HK",
           "hk",
           "HongKong",
@@ -269,8 +267,7 @@
       "outbounds": ["{all}"],
       "filter": {
         "include": [
-          "^.*\\.(tw|台湾|臺灣|台)$",
-          "🇹🇼",
+          "台湾",
           "TW",
           "tw",
           "Taiwan"
@@ -286,8 +283,7 @@
       "outbounds": ["{all}"],
       "filter": {
         "include": [
-          "^.*\\.(sg|新加坡|狮城)$",
-          "🇸🇬",
+          "新加坡",
           "SG",
           "sg",
           "Singapore"
@@ -303,8 +299,7 @@
       "outbounds": ["{all}"],
       "filter": {
         "include": [
-          "^.*\\.(jp|日本)$",
-          "🇯🇵",
+          "日本",
           "JP",
           "jp",
           "Japan"
@@ -320,8 +315,7 @@
       "outbounds": ["{all}"],
       "filter": {
         "include": [
-          "^.*\\.(kr|韩国)$",
-          "🇰🇷",
+          "韩国",
           "KR",
           "kr",
           "Korea",
@@ -338,8 +332,7 @@
       "outbounds": ["{all}"],
       "filter": {
         "include": [
-          "^.*\\.(us|美国)$",
-          "🇺🇸",
+          "美国",
           "US",
           "us",
           "United\\s?States"
@@ -404,12 +397,11 @@
         "sniff": true
       },
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {"port": 53},
-          {"protocol": "dns"}
-        ],
+        "port": 53,
+        "hijack_dns": true
+      },
+      {
+        "protocol": "dns",
         "hijack_dns": true
       },
       {
