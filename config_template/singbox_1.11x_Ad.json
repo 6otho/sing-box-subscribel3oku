@@ -32,7 +32,12 @@
     ],
     "rules": [
       {
-        "outbound": "any",
+        "outbound": [
+      {
+        "any",
+        "reject",
+        }
+     ],
         "server": "localDns"
       },
       {
