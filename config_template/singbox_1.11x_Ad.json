@@ -59,19 +59,26 @@
     {
       "tag": "tun-in",
       "type": "tun",
-      "inet4_address": "172.19.0.1/30",
+      "address": [
+        "172.19.0.0/30"
+      ],
       "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
       "stack": "system",
-      "sniff": true
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
+      }
     },
     {
       "tag": "mixed-in",
       "type": "mixed",
       "listen": "127.0.0.1",
-      "listen_port": 2080,
-      "sniff": true
+      "listen_port": 2080
     }
   ],
   "outbounds": [
@@ -87,6 +94,7 @@
       "tag": "🚀 Proxy",
       "type": "selector",
       "outbounds": [
+        "{all}",
         "🇭🇰 HK AUTO",
         "🇨🇳 TW AUTO",
         "🇸🇬 SG AUTO",
@@ -280,8 +288,7 @@
       "outbounds": [
         "direct",
         "🚀 Proxy"
-      ],
-      "default": "direct"
+      ]
     },
     {
       "tag": "🇭🇰 HK AUTO",
@@ -289,14 +296,19 @@
       "outbounds": [
         "{all}"
       ],
-      "filter": {
-        "regex": [
-          "(?i)HK",
-          "(?i)Hong Kong",
-          "香港",
-          "港"
-        ]
-      },
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(hk|香港|港)$",
+            "🇭🇰",
+            "HK",
+            "hk",
+            "HongKong",
+            "Hong\\s?Kong"
+          ]
+        }
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -307,15 +319,18 @@
       "outbounds": [
         "{all}"
       ],
-      "filter": {
-        "regex": [
-          "(?i)TW",
-          "(?i)Taiwan",
-          "台湾",
-          "臺灣",
-          "台"
-        ]
-      },
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(tw|台湾|臺灣|台)$",
+            "🇹🇼",
+            "TW",
+            "tw",
+            "Taiwan"
+          ]
+        }
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -326,14 +341,18 @@
       "outbounds": [
         "{all}"
       ],
-      "filter": {
-        "regex": [
-          "(?i)SG",
-          "(?i)Singapore",
-          "新加坡",
-          "狮城"
-        ]
-      },
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(sg|新加坡|狮城)$",
+            "🇸🇬",
+            "SG",
+            "sg",
+            "Singapore"
+          ]
+        }
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -344,13 +363,18 @@
       "outbounds": [
         "{all}"
       ],
-      "filter": {
-        "regex": [
-          "(?i)JP",
-          "(?i)Japan",
-          "日本"
-        ]
-      },
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(jp|日本)$",
+            "🇯🇵",
+            "JP",
+            "jp",
+            "Japan"
+          ]
+        }
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -361,13 +385,19 @@
       "outbounds": [
         "{all}"
       ],
-      "filter": {
-        "regex": [
-          "(?i)KR",
-          "(?i)Korea",
-          "韩国"
-        ]
-      },
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(kr|韩国)$",
+            "🇰🇷",
+            "KR",
+            "kr",
+            "Korea",
+            "South\\s?Korea"
+          ]
+        }
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -378,13 +408,18 @@
       "outbounds": [
         "{all}"
       ],
-      "filter": {
-        "regex": [
-          "(?i)US",
-          "(?i)United States",
-          "美国"
-        ]
-      },
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "^.*\\.(us|美国)$",
+            "🇺🇸",
+            "US",
+            "us",
+            "United\\s?States"
+          ]
+        }
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
@@ -395,19 +430,31 @@
       "outbounds": [
         "{all}"
       ],
-      "filter": {
-        "exclude_regex": [
-          "(?i)HK", "香港",
-          "(?i)TW", "台湾",
-          "(?i)SG", "新加坡",
-          "(?i)JP", "日本",
-          "(?i)KR", "韩国",
-          "(?i)US", "美国"
-        ]
-      },
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 50
+      "filter": [
+        {
+          "action": "exclude",
+          "keywords": [
+            "HK",
+            "hk",
+            "香港",
+            "TW",
+            "tw",
+            "台湾",
+            "SG",
+            "sg",
+            "新加坡",
+            "JP",
+            "jp",
+            "日本",
+            "🇰🇷",
+            "KR",
+            "韩国",
+            "US",
+            "us",
+            "美国"
+          ]
+        }
+      ]
     }
   ],
   "route": {
@@ -415,11 +462,30 @@
     "final": "🚀 Proxy",
     "rules": [
       {
-        "protocol": "dns",
-        "outbound": "dns-out"
+        "inbound": [
+          "tun-in",
+          "mixed-in"
+        ],
+        "action": "sniff"
       },
       {
-        "rule_set": "geosite-category-ads-all",
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 53
+          },
+          {
+            "protocol": "dns"
+          }
+        ],
+        "action": "hijack-dns"
+      },
+      {
+        "rule_set": [
+          "geosite-category-ads-all"
+        ],
+        "clash_mode": "rule",
         "outbound": "🔈 AD blocking"
       },
       {
@@ -427,29 +493,30 @@
           "BlockHttpDNS",
           "STUN"
         ],
+        "clash_mode": "rule",
         "outbound": "🔎 HttpDNS"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "clash_mode": "global",
+        "outbound": "🚀 Proxy"
       },
       {
         "type": "logical",
         "mode": "or",
         "rules": [
           {
-            "port_range": [
-              "3478",
-              "5349"
-            ]
+            "port": [3478, 5349]
           },
           {
             "network": "udp",
-            "port_range": [
-              "19302",
-              "5350-5351"
-            ]
+            "port": [5350, 5351, 19302]
           },
           {
             "rule_set": "STUN"
           }
         ],
+        "clash_mode": "rule",
         "outbound": "💧 Leak interception"
       },
       {
@@ -478,7 +545,9 @@
         "outbound": "🤖 AI"
       },
       {
-        "rule_set": "geosite-youtube",
+        "rule_set": [
+          "geosite-youtube"
+        ],
         "outbound": "📺 Youtube"
       },
       {
@@ -760,7 +829,7 @@
         "tag": "geoip-apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/apple.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geoip/apple.srs",
         "download_detour": "direct"
       },
       {
