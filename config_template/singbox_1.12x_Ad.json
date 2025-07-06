@@ -3,7 +3,7 @@
         "disabled": false,
         "level": "info",
         "output": "",
-        "timestamp": true
+        "timestamp": false
     },
     "experimental": {
         "clash_api": {
@@ -19,48 +19,49 @@
                 "https://yacd.metacubex.one",
                 "https://d.metacubex.one",
                 "https://board.zash.run.place"
-            ]
+            ],
+            "access_control_allow_private_network": true
         },
         "cache_file": {
             "enabled": true,
             "path": "cache.db",
-            "store_fakeip": true
+            "cache_id": "",
+            "store_fakeip": true,
+            "store_rdrc": true,
+            "rdrc_timeout": "1d"
         }
     },
     "dns": {
-        "fakeip": {
-            "enabled": true,
-            "inet4_range": "198.18.0.0/15",
-            "inet6_range": "fc00::/18"
-        },
         "servers": [
             {
+                "type": "local",
                 "tag": "local",
-                "address": "local",
                 "detour": "🎯 全球直连"
             },
             {
+                "type": "https",
                 "tag": "DIRECT-DNS",
-                "address_resolver": "local",
-                "address": "https://dns.alidns.com/dns-query",
-                "detour": "🎯 全球直连"
+                "detour": "🎯 全球直连",
+                "server_port": 443,
+                "server": "dns.alidns.com",
+                "domain_resolver": "local"
             },
             {
+                "type": "https",
                 "tag": "PROXY-DNS",
-                "address_resolver": "local",
-                "address": "https://dns.google/dns-query",
-                "detour": "🚀 节点选择"
+                "detour": "🚀 节点选择",
+                "server_port": 443,
+                "server": "dns.google",
+                "domain_resolver": "local"
             },
             {
+                "type": "fakeip",
                 "tag": "FAKEIP-DNS",
-                "address": "fakeip"
+                "inet4_range": "198.18.0.0/15",
+                "inet6_range": "fc00::/18"
             }
         ],
         "rules": [
-            {
-                "outbound": "any",
-                "server": "DIRECT-DNS"
-            },
             {
                 "clash_mode": "direct",
                 "server": "DIRECT-DNS"
@@ -81,8 +82,7 @@
                     "A",
                     "AAAA"
                 ],
-                "server": "FAKEIP-DNS",
-                "rewrite_ttl": 1
+                "server": "FAKEIP-DNS"
             }
         ],
         "disable_cache": true,
@@ -95,37 +95,36 @@
     {
       "tag": "tun-in",
       "type": "tun",
-      "address": ["172.19.0.0/30"],
-      "mtu": 9000,
+      "address": [
+        "172.19.0.0/30",
+        "fdfe:dcba:9876::0/126"
+      ],
+      "stack": "system",
       "auto_route": true,
       "strict_route": true,
-      "stack": "system",
       "platform": {
-        "http_proxy": { "enabled": true, "server": "127.0.0.1", "server_port": 2080 }
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 7890
+        }
       }
     },
     {
       "tag": "mixed-in",
       "type": "mixed",
       "listen": "127.0.0.1",
-      "listen_port": 2080
+      "listen_port": 7890
     }
   ],
     "outbounds": [
         {
-            "tag": "🎯 全球直连",
+            "tag": "🎯 全局直连",
             "type": "direct"
         },
         {
             "tag": "🚫 拒绝连接",
-            "type": "socks",
-            "server": "127.0.0.1",
-            "server_port": 1024,
-            "version": "5",
-            "username": "sekai",
-            "password": "admin",
-            "network": "udp",
-            "udp_over_tcp": false
+            "type": "block"
         },
         {
             "tag": "🚀 节点选择",
