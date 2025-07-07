@@ -300,7 +300,8 @@
                 "🌐 全球自动"
             ],
             "default": "🚀 节点选择"
-            {
+         },
+         {
             "tag": "🎯 全球直连",
             "type": "selector",
             "interrupt_exist_connections": true,
