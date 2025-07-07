@@ -598,7 +598,7 @@
             },
             {
                 "rule_set": "geosite-tiktok",
-                "outbound": "🎵 TikTok"
+                "outbound": "🎥 TikTok"
             },
             {
                 "rule_set": "geosite-line",
