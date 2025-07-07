@@ -67,10 +67,6 @@
                 "rewrite_ttl": 1
             },
             {
-                "outbound": "any",
-                "server": "DIRECT-DNS"
-            },
-            {
                 "clash_mode": "direct",
                 "server": "DIRECT-DNS"
             },
