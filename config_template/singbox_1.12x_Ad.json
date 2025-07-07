@@ -665,6 +665,13 @@
         ],
         "rule_set": [
             {
+                "tag": "STUN",
+                "type": "remote",
+                "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/stun.srs",
+                "format": "binary",
+                "download_detour": "🎯 全球直连"
+            },
+            {
                 "tag": "geosite-private",
                 "type": "remote",
                 "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
