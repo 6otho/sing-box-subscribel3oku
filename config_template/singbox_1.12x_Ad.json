@@ -37,13 +37,11 @@
             },
             {
                 "tag": "local",
-                "type": "local",
-                "detour": "🎯 全球直连"
+                "type": "local"
             },
             {
                 "type": "https",
                 "tag": "DIRECT-DNS",
-                "detour": "🎯 全球直连",
                 "server_port": 443,
                 "server": "dns.alidns.com",
                 "domain_resolver": "local"
