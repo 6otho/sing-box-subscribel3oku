@@ -118,25 +118,6 @@
     ],
     "outbounds": [
         {
-            "type": "socks",
-            "server": "example.org",
-            "server_port": 2080,
-            "domain_resolver": {
-                "server": "local",
-                "rewrite_ttl": 60,
-                "client_subnet": "1.1.1.1"
-            }
-        },
-        {
-            "type": "socks",
-            "server": "example.org",
-            "server_port": 2080,
-            "domain_resolver": {
-                "server": "local",
-                "strategy": "prefer_ipv4"
-            }
-        },
-        {
             "tag": "🎯 全球直连",
             "type": "direct"
         },
