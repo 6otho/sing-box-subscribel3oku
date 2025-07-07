@@ -30,18 +30,14 @@
     "dns": {
         "servers": [
             {
-                "tag": "FAKEIP-DNS",
-                "type": "fakeip",
-                "inet4_range": "198.18.0.0/15",
-                "inet6_range": "fc00::/18"
-            },
-            {
+                "type": "local",
                 "tag": "local",
-                "type": "local"
+                "detour": "🎯 全球直连"
             },
             {
                 "type": "https",
                 "tag": "DIRECT-DNS",
+                "detour": "🎯 全球直连",
                 "server_port": 443,
                 "server": "dns.alidns.com",
                 "domain_resolver": "local"
@@ -53,17 +49,15 @@
                 "server_port": 443,
                 "server": "dns.google",
                 "domain_resolver": "local"
+            },
+            {
+                "type": "fakeip",
+                "tag": "FAKEIP-DNS",
+                "inet4_range": "198.18.0.0/15",
+                "inet6_range": "fc00::/18"
             }
         ],
         "rules": [
-            {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "server": "FAKEIP-DNS",
-                "rewrite_ttl": 1
-            },
             {
                 "clash_mode": "direct",
                 "server": "DIRECT-DNS"
@@ -78,44 +72,47 @@
                     "geosite-private"
                 ],
                 "server": "DIRECT-DNS"
+            },
+            {
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
+                "server": "FAKEIP-DNS"
             }
         ],
         "disable_cache": true,
         "disable_expire": true,
         "independent_cache": true,
         "final": "PROXY-DNS",
-        "strategy": "ipv4_only"
+        "strategy": "prefer_ipv4"
     },
     "inbounds": [
-        {
-            "tag": "tun-in",
-            "type": "tun",
-            "address": [
-                "172.19.0.1/30"
-            ],
-            "route_address": [
-                "0.0.0.0/0"
-            ],
-            "route_exclude_address": [
-                "192.168.0.0/16"
-            ],
-            "mtu": 9000,
-            "stack": "system",
-            "platform": {
-                "http_proxy": {
-                    "enabled": true,
-                    "server": "127.0.0.1",
-                    "server_port": 2080
-                }
-            }
-        },
-        {
-            "tag": "mixed-in",
-            "type": "mixed",
-            "listen": "127.0.0.1",
-            "listen_port": 2080
+    {
+      "tag": "tun-in",
+      "type": "tun",
+      "address": [
+        "172.19.0.0/30",
+        "fdfe:dcba:9876::0/126"
+      ],
+      "stack": "system",
+      "auto_route": true,
+      "strict_route": true,
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 7890
         }
-    ],
+      }
+    },
+    {
+      "tag": "mixed-in",
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 7890
+    }
+  ],
     "outbounds": [
         {
             "tag": "🎯 全球直连",
