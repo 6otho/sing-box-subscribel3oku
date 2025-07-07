@@ -319,16 +319,6 @@
             "default": "🚀 节点选择"
         },
         {
-            "tag": "↪️ 出站模式",
-            "type": "selector",
-            "interrupt_exist_connections": true,
-            "outbounds": [
-                "🎯 全球直连",
-                "🚀 节点选择",
-                "🌵 手动选择"
-            ]
-        },
-        {
             "tag": "🔈 广告拦截",
             "type": "selector",
             "interrupt_exist_connections": true,
@@ -548,10 +538,6 @@
             {
                 "clash_mode": "direct",
                 "outbound": "🎯 全球直连"
-            },
-            {
-                "clash_mode": "global",
-                "outbound": "↪️ 出站模式"
             },
             {
                 "domain": [
