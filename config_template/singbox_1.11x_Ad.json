@@ -240,7 +240,7 @@
             "default": "🚀 节点选择"
         },
         {
-            "tag": "🎥 Netflix",
+            "tag": "📹 Netflix",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
@@ -620,7 +620,7 @@
                     "geoip-netflix",
                     "geosite-netflix"
                 ],
-                "outbound": "🎥 Netflix"
+                "outbound": "📹 Netflix"
             },
             {
                 "rule_set": [
