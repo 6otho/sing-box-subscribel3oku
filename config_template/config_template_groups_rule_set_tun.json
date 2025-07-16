@@ -346,7 +346,7 @@
         },
         {
             "tag": "🇭🇰 香港自动",
-            "type": "selector",
+            "type": "urltest",
             "outbounds": [
                 "{all}"
             ],
@@ -363,9 +363,13 @@
                     ]
                 }
             ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
             "tag": "🇨🇳 台湾自动",
-            "type": "selector",
+            "type": "urltest",
             "outbounds": [
                 "{all}"
             ],
@@ -381,9 +385,13 @@
                     ]
                 }
             ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
             "tag": "🇸🇬 新加坡自动",
-            "type": "selector",
+            "type": "urltest",
             "outbounds": [
                 "{all}"
             ],
@@ -399,9 +407,13 @@
                     ]
                 }
             ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
             "tag": "🇯🇵 日本自动",
-            "type": "selector",
+            "type": "urltest",
             "outbounds": [
                 "{all}"
             ],
@@ -417,9 +429,13 @@
                     ]
                 }
             ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
             "tag": "🇰🇷 韩国自动",
-            "type": "selector",
+            "type": "urltest",
             "outbounds": [
                 "{all}"
             ],
@@ -436,9 +452,13 @@
                     ]
                 }
             ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
             "tag": "🇺🇸 美国自动",
-            "type": "selector",
+            "type": "urltest",
             "outbounds": [
                 "{all}"
             ],
@@ -454,9 +474,13 @@
                     ]
                 }
             ],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
         {
             "tag": "🌐 全球自动",
-            "type": "selector",
+            "type": "urltest",
             "outbounds": [
                 "{all}"
             ],
