@@ -346,7 +346,7 @@
         },
         {
             "tag": "🇭🇰 香港自动",
-            "type": "urltest",
+            "type": "selector",
             "outbounds": [
                 "{all}"
             ],
@@ -369,7 +369,7 @@
         },
         {
             "tag": "🇨🇳 台湾自动",
-            "type": "urltest",
+            "type": "selector",
             "outbounds": [
                 "{all}"
             ],
@@ -391,7 +391,7 @@
         },
         {
             "tag": "🇸🇬 新加坡自动",
-            "type": "urltest",
+            "type": "selector",
             "outbounds": [
                 "{all}"
             ],
@@ -413,7 +413,7 @@
         },
         {
             "tag": "🇯🇵 日本自动",
-            "type": "urltest",
+            "type": "selector",
             "outbounds": [
                 "{all}"
             ],
@@ -435,7 +435,7 @@
         },
         {
             "tag": "🇰🇷 韩国自动",
-            "type": "urltest",
+            "type": "selector",
             "outbounds": [
                 "{all}"
             ],
@@ -458,7 +458,7 @@
         },
         {
             "tag": "🇺🇸 美国自动",
-            "type": "urltest",
+            "type": "selector",
             "outbounds": [
                 "{all}"
             ],
@@ -480,7 +480,7 @@
         },
         {
             "tag": "🌐 全球自动",
-            "type": "urltest",
+            "type": "selector",
             "outbounds": [
                 "{all}"
             ],
