@@ -132,8 +132,7 @@
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": ["{all}"
-            ],
-            "default": "🇸🇬 新加坡自动"
+            ]
         },
         {
             "tag": "🤖 AI",
