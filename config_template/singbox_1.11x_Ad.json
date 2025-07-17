@@ -85,32 +85,38 @@
                 "rewrite_ttl": 1
             }
         ],
-        "disable_cache": true,
+        "disable_cache": false,
         "disable_expire": true,
         "independent_cache": true,
         "final": "PROXY-DNS",
         "strategy": "prefer_ipv4"
     },
-  "inbounds": [
-    {
-      "tag": "tun-in",
-      "type": "tun",
-      "address": ["172.19.0.0/30"],
-      "mtu": 9000,
-      "auto_route": true,
-      "strict_route": true,
-      "stack": "system",
-      "platform": {
-        "http_proxy": { "enabled": true, "server": "127.0.0.1", "server_port": 2080 }
-      }
-    },
-    {
-      "tag": "mixed-in",
-      "type": "mixed",
-      "listen": "127.0.0.1",
-      "listen_port": 2080
-    }
-  ],
+    "inbounds": [
+        {
+            "tag": "tun-in",
+            "type": "tun",
+            "address": [
+                "172.19.0.0/30"
+            ],
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "platform": {
+                "http_proxy": {
+                    "enabled": true,
+                    "server": "127.0.0.1",
+                    "server_port": 2080
+                }
+            }
+        },
+        {
+            "tag": "mixed-in",
+            "type": "mixed",
+            "listen": "127.0.0.1",
+            "listen_port": 2080
+        }
+    ],
     "outbounds": [
         {
             "tag": "🇨🇳 全局直连",
@@ -118,14 +124,7 @@
         },
         {
             "tag": "🚫 拒绝连接",
-            "type": "socks",
-            "server": "127.0.0.1",
-            "server_port": 1024,
-            "version": "5",
-            "username": "sekai",
-            "password": "admin",
-            "network": "udp",
-            "udp_over_tcp": false
+            "type": "block"
         },
         {
             "tag": "🚀 节点选择",
@@ -142,7 +141,8 @@
             "outbounds": [
                 "🚀 节点选择",
                 "{all}"
-            ]
+            ],
+            "default": "🚀 节点选择"
         },
         {
             "tag": "📲 Telegram",
@@ -151,7 +151,8 @@
             "outbounds": [
                 "🚀 节点选择",
                 "{all}"
-            ]
+            ],
+            "default": "🚀 节点选择"
         },
         {
             "tag": "🎥 TikTok",
@@ -160,7 +161,8 @@
             "outbounds": [
                 "🚀 节点选择",
                 "{all}"
-            ]
+            ],
+            "default": "🚀 节点选择"
         },
         {
             "tag": "📺 YouTube",
@@ -169,7 +171,8 @@
             "outbounds": [
                 "🚀 节点选择",
                 "{all}"
-            ]
+            ],
+            "default": "🚀 节点选择"
         },
         {
             "tag": "🎵 Spotify",
@@ -178,7 +181,8 @@
             "outbounds": [
                 "🚀 节点选择",
                 "{all}"
-            ]
+            ],
+            "default": "🚀 节点选择"
         },
         {
             "tag": "🌵 Line",
@@ -187,7 +191,8 @@
             "outbounds": [
                 "🚀 节点选择",
                 "{all}"
-            ]
+            ],
+            "default": "🚀 节点选择"
         },
         {
             "tag": "📹 Netflix",
@@ -196,9 +201,10 @@
             "outbounds": [
                 "🚀 节点选择",
                 "{all}"
-            ]
-         },
-         {
+            ],
+            "default": "🚀 节点选择"
+        },
+        {
             "tag": "🔍 Google",
             "type": "selector",
             "interrupt_exist_connections": true,
@@ -235,7 +241,7 @@
             "outbounds": [
                 "🚀 节点选择",
                 "🇨🇳 全局直连"
-             ],
+            ],
             "default": "🇨🇳 全局直连"
         },
         {
@@ -246,7 +252,8 @@
                 "🚫 拒绝连接",
                 "🎯 全球直连",
                 "🚀 节点选择"
-            ]
+            ],
+            "default": "🚫 拒绝连接"
         },
         {
             "tag": "💧 泄漏拦截",
@@ -256,7 +263,8 @@
                 "🚫 拒绝连接",
                 "🎯 全球直连",
                 "🚀 节点选择"
-            ]
+            ],
+            "default": "🚫 拒绝连接"
         },
         {
             "tag": "🔎 HttpDNS",
@@ -266,17 +274,28 @@
                 "🚫 拒绝连接",
                 "🎯 全球直连",
                 "🚀 节点选择"
-            ]
+            ],
+            "default": "🚫 拒绝连接"
         },
         {
             "tag": "🇭🇰 香港自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇭🇰", "HK", "hk", "HongKong", "Hong\\s?Kong", "\\.hk$", "香港", "港"
+                        "🇭🇰",
+                        "HK",
+                        "hk",
+                        "HongKong",
+                        "Hong\\s?Kong",
+                        "\\.hk$",
+                        "香港",
+                        "港"
                     ]
                 }
             ],
@@ -287,12 +306,22 @@
         {
             "tag": "🇹🇼 台湾自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇹🇼", "TW", "tw", "Taiwan", "\\.tw$", "台湾", "臺灣", "台"
+                        "🇹🇼",
+                        "TW",
+                        "tw",
+                        "Taiwan",
+                        "\\.tw$",
+                        "台湾",
+                        "臺灣",
+                        "台"
                     ]
                 }
             ],
@@ -303,12 +332,21 @@
         {
             "tag": "🇸🇬 新加坡自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇸🇬", "SG", "sg", "Singapore", "\\.sg$", "新加坡", "狮城"
+                        "🇸🇬",
+                        "SG",
+                        "sg",
+                        "Singapore",
+                        "\\.sg$",
+                        "新加坡",
+                        "狮城"
                     ]
                 }
             ],
@@ -319,12 +357,20 @@
         {
             "tag": "🇯🇵 日本自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇯🇵", "JP", "jp", "Japan", "\\.jp$", "日本"
+                        "🇯🇵",
+                        "JP",
+                        "jp",
+                        "Japan",
+                        "\\.jp$",
+                        "日本"
                     ]
                 }
             ],
@@ -335,12 +381,21 @@
         {
             "tag": "🇰🇷 韩国自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇰🇷", "KR", "kr", "Korea", "South\\s?Korea", "\\.kr$", "韩国"
+                        "🇰🇷",
+                        "KR",
+                        "kr",
+                        "Korea",
+                        "South\\s?Korea",
+                        "\\.kr$",
+                        "韩国"
                     ]
                 }
             ],
@@ -351,12 +406,20 @@
         {
             "tag": "🇺🇸 美国自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇺🇸", "US", "us", "United\\s?States", "\\.us$", "美国"
+                        "🇺🇸",
+                        "US",
+                        "us",
+                        "United\\s?States",
+                        "\\.us$",
+                        "美国"
                     ]
                 }
             ],
@@ -367,12 +430,20 @@
         {
             "tag": "🇮🇳 印度自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇮🇳", "IN", "in", "India", "\\.in$", "印度"
+                        "🇮🇳",
+                        "IN",
+                        "in",
+                        "India",
+                        "\\.in$",
+                        "印度"
                     ]
                 }
             ],
@@ -383,12 +454,20 @@
         {
             "tag": "🇩🇪 德国自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇩🇪", "DE", "de", "Germany", "\\.de$", "德国"
+                        "🇩🇪",
+                        "DE",
+                        "de",
+                        "Germany",
+                        "\\.de$",
+                        "德国"
                     ]
                 }
             ],
@@ -399,12 +478,21 @@
         {
             "tag": "🇳🇱 荷兰自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇳🇱", "NL", "nl", "Netherlands", "Holland", "\\.nl$", "荷兰"
+                        "🇳🇱",
+                        "NL",
+                        "nl",
+                        "Netherlands",
+                        "Holland",
+                        "\\.nl$",
+                        "荷兰"
                     ]
                 }
             ],
@@ -415,12 +503,20 @@
         {
             "tag": "🇧🇷 巴西自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇧🇷", "BR", "br", "Brazil", "\\.br$", "巴西"
+                        "🇧🇷",
+                        "BR",
+                        "br",
+                        "Brazil",
+                        "\\.br$",
+                        "巴西"
                     ]
                 }
             ],
@@ -431,12 +527,20 @@
         {
             "tag": "🇦🇷 阿根廷自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇦🇷", "AR", "ar", "Argentina", "\\.ar$", "阿根廷"
+                        "🇦🇷",
+                        "AR",
+                        "ar",
+                        "Argentina",
+                        "\\.ar$",
+                        "阿根廷"
                     ]
                 }
             ],
@@ -447,12 +551,20 @@
         {
             "tag": "🇪🇬 埃及自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇪🇬", "EG", "eg", "Egypt", "\\.eg$", "埃及"
+                        "🇪🇬",
+                        "EG",
+                        "eg",
+                        "Egypt",
+                        "\\.eg$",
+                        "埃及"
                     ]
                 }
             ],
@@ -463,12 +575,20 @@
         {
             "tag": "🇸🇾 叙利亚自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇸🇾", "SY", "sy", "Syria", "\\.sy$", "叙利亚"
+                        "🇸🇾",
+                        "SY",
+                        "sy",
+                        "Syria",
+                        "\\.sy$",
+                        "叙利亚"
                     ]
                 }
             ],
@@ -479,12 +599,20 @@
         {
             "tag": "🇮🇱 以色列自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇮🇱", "IL", "il", "Israel", "\\.il$", "以色列"
+                        "🇮🇱",
+                        "IL",
+                        "il",
+                        "Israel",
+                        "\\.il$",
+                        "以色列"
                     ]
                 }
             ],
@@ -495,12 +623,20 @@
         {
             "tag": "🇹🇭 泰国自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇹🇭", "TH", "th", "Thailand", "\\.th$", "泰国"
+                        "🇹🇭",
+                        "TH",
+                        "th",
+                        "Thailand",
+                        "\\.th$",
+                        "泰国"
                     ]
                 }
             ],
@@ -511,12 +647,20 @@
         {
             "tag": "🇻🇳 越南自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇻🇳", "VN", "vn", "Vietnam", "\\.vn$", "越南"
+                        "🇻🇳",
+                        "VN",
+                        "vn",
+                        "Vietnam",
+                        "\\.vn$",
+                        "越南"
                     ]
                 }
             ],
@@ -527,12 +671,20 @@
         {
             "tag": "🇱🇦 老挝自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇱🇦", "LA", "la", "Laos", "\\.la$", "老挝"
+                        "🇱🇦",
+                        "LA",
+                        "la",
+                        "Laos",
+                        "\\.la$",
+                        "老挝"
                     ]
                 }
             ],
@@ -543,12 +695,21 @@
         {
             "tag": "🇲🇲 缅甸自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇲🇲", "MM", "mm", "Myanmar", "Burma", "\\.mm$", "缅甸"
+                        "🇲🇲",
+                        "MM",
+                        "mm",
+                        "Myanmar",
+                        "Burma",
+                        "\\.mm$",
+                        "缅甸"
                     ]
                 }
             ],
@@ -559,12 +720,20 @@
         {
             "tag": "🇲🇾 马来西亚自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇲🇾", "MY", "my", "Malaysia", "\\.my$", "马来西亚"
+                        "🇲🇾",
+                        "MY",
+                        "my",
+                        "Malaysia",
+                        "\\.my$",
+                        "马来西亚"
                     ]
                 }
             ],
@@ -575,12 +744,21 @@
         {
             "tag": "🇲🇴 澳门自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇲🇴", "MO", "mo", "Macau", "\\.mo$", "澳门", "澳門"
+                        "🇲🇴",
+                        "MO",
+                        "mo",
+                        "Macau",
+                        "\\.mo$",
+                        "澳门",
+                        "澳門"
                     ]
                 }
             ],
@@ -591,12 +769,20 @@
         {
             "tag": "🇦🇺 澳大利亚自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇦🇺", "AU", "au", "Australia", "\\.au$", "澳大利亚"
+                        "🇦🇺",
+                        "AU",
+                        "au",
+                        "Australia",
+                        "\\.au$",
+                        "澳大利亚"
                     ]
                 }
             ],
@@ -607,12 +793,22 @@
         {
             "tag": "🇬🇧 英国自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇬🇧", "UK", "uk", "GB", "United\\s?Kingdom", "Britain", "\\.uk$", "英国"
+                        "🇬🇧",
+                        "UK",
+                        "uk",
+                        "GB",
+                        "United\\s?Kingdom",
+                        "Britain",
+                        "\\.uk$",
+                        "英国"
                     ]
                 }
             ],
@@ -623,12 +819,20 @@
         {
             "tag": "🇨🇦 加拿大自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇨🇦", "CA", "ca", "Canada", "\\.ca$", "加拿大"
+                        "🇨🇦",
+                        "CA",
+                        "ca",
+                        "Canada",
+                        "\\.ca$",
+                        "加拿大"
                     ]
                 }
             ],
@@ -639,12 +843,20 @@
         {
             "tag": "🇵🇭 菲律宾自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇵🇭", "PH", "ph", "Philippines", "\\.ph$", "菲律宾"
+                        "🇵🇭",
+                        "PH",
+                        "ph",
+                        "Philippines",
+                        "\\.ph$",
+                        "菲律宾"
                     ]
                 }
             ],
@@ -655,12 +867,20 @@
         {
             "tag": "🇹🇷 土耳其自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇹🇷", "TR", "tr", "Turkey", "\\.tr$", "土耳其"
+                        "🇹🇷",
+                        "TR",
+                        "tr",
+                        "Turkey",
+                        "\\.tr$",
+                        "土耳其"
                     ]
                 }
             ],
@@ -671,12 +891,20 @@
         {
             "tag": "🇵🇱 波兰自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇵🇱", "PL", "pl", "Poland", "\\.pl$", "波兰"
+                        "🇵🇱",
+                        "PL",
+                        "pl",
+                        "Poland",
+                        "\\.pl$",
+                        "波兰"
                     ]
                 }
             ],
@@ -687,12 +915,20 @@
         {
             "tag": "🇨🇭 瑞士自动",
             "type": "urltest",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
+            "default": "🚀 节点选择",
             "filter": [
                 {
                     "action": "include",
                     "keywords": [
-                        "🇨🇭", "CH", "ch", "Switzerland", "\\.ch$", "瑞士"
+                        "🇨🇭",
+                        "CH",
+                        "ch",
+                        "Switzerland",
+                        "\\.ch$",
+                        "瑞士"
                     ]
                 }
             ],
@@ -738,11 +974,8 @@
         "final": "🚀 节点选择",
         "rules": [
             {
-                "action": "sniff"
-            },
-            {
                 "protocol": "dns",
-                "action": "hijack-dns"
+                "outbound": "dns-out"
             },
             {
                 "ip_is_private": true,
@@ -753,61 +986,26 @@
                 "outbound": "🎯 全球直连"
             },
             {
-                "domain": [
-                    "cdn.jsdmirror.com"
-                ],
-                "outbound": "🎯 全球直连"
-            },
-            {
                 "rule_set": "geosite-category-ads-all",
-                "action": "reject"
+                "outbound": "🚫 拒绝连接"
             },
             {
                 "type": "logical",
                 "mode": "or",
                 "rules": [
-                    {
-                        "port": [
-                            3478
-                        ]
-                    },
-                    {
-                        "network": [
-                            "tcp"
-                        ],
-                        "port": [
-                            5349
-                        ]
-                    },
-                    {
-                        "network": [
-                            "udp"
-                        ],
-                        "port": [
-                            5350,
-                            5351,
-                            19302
-                        ]
-                    },
-                    {
-                        "rule_set": [
-                            "STUN"
-                        ]
-                    }
+                    { "port": [3478] },
+                    { "network": ["tcp"], "port": [5349] },
+                    { "network": ["udp"], "port": [5350, 5351, 19302] },
+                    { "rule_set": ["STUN"] }
                 ],
                 "outbound": "💧 泄漏拦截"
             },
             {
-                "rule_set": [
-                    "BlockHttpDNS"
-                ],
+                "rule_set": [ "BlockHttpDNS" ],
                 "outbound": "🔎 HttpDNS"
             },
             {
-                "rule_set": [
-                    "geoip-google",
-                    "geosite-google"
-                ],
+                "rule_set": [ "geosite-google", "geoip-google" ],
                 "outbound": "🔍 Google"
             },
             {
@@ -831,30 +1029,19 @@
                 "outbound": "🎵 Spotify"
             },
             {
-                "rule_set": [
-                    "geoip-telegram",
-                    "geosite-telegram"
-                ],
+                "rule_set": [ "geosite-telegram", "geoip-telegram" ],
                 "outbound": "📲 Telegram"
             },
             {
-                "rule_set": [
-                    "geoip-netflix",
-                    "geosite-netflix"
-                ],
+                "rule_set": [ "geosite-netflix", "geoip-netflix" ],
                 "outbound": "📹 Netflix"
             },
             {
-                "rule_set": [
-                    "geosite-microsoft"
-                ],
+                "rule_set": [ "geosite-microsoft" ],
                 "outbound": "📖 Microsoft"
             },
             {
-                "rule_set": [
-                    "geoip-apple",
-                    "geosite-apple"
-                ],
+                "rule_set": [ "geosite-apple", "geoip-apple" ],
                 "outbound": "🍎 Apple"
             },
             {
@@ -952,6 +1139,13 @@
                 "download_detour": "🎯 全球直连"
             },
             {
+                "tag": "geosite-spotify",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/spotify.srs",
+                "download_detour": "🎯 全球直连"
+            },
+            {
                 "tag": "geoip-private",
                 "type": "remote",
                 "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs",
@@ -970,13 +1164,6 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs",
-                "download_detour": "🎯 全球直连"
-            },
-            {
-                "tag": "geosite-spotify",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/spotify.srs",
                 "download_detour": "🎯 全球直连"
             },
             {
