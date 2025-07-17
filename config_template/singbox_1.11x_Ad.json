@@ -134,6 +134,7 @@
             "outbounds": [
                 "{all}"
             ]
+        },
         {
             "tag": "🤖 AI",
             "type": "selector",
@@ -142,6 +143,7 @@
                 "🚀 节点选择",
                 "{all}"
             ]
+        },
         {
             "tag": "📲 Telegram",
             "type": "selector",
@@ -150,6 +152,7 @@
                 "🚀 节点选择",
                 "{all}"
             ]
+        },
         {
             "tag": "🎥 TikTok",
             "type": "selector",
@@ -158,6 +161,7 @@
                 "🚀 节点选择",
                 "{all}"
             ]
+        },
         {
             "tag": "📺 YouTube",
             "type": "selector",
@@ -166,6 +170,7 @@
                 "🚀 节点选择",
                 "{all}"
             ]
+        },
         {
             "tag": "🎵 Spotify",
             "type": "selector",
@@ -174,6 +179,7 @@
                 "🚀 节点选择",
                 "{all}"
             ]
+        },
         {
             "tag": "🌵 Line",
             "type": "selector",
@@ -182,6 +188,7 @@
                 "🚀 节点选择",
                 "{all}"
             ]
+        },
         {
             "tag": "📹 Netflix",
             "type": "selector",
@@ -190,6 +197,7 @@
                 "🚀 节点选择",
                 "{all}"
             ]
+         },
          {
             "tag": "🔍 Google",
             "type": "selector",
@@ -861,7 +869,7 @@
         },
         {
             "tag": "🌐 全球自动",
-            "type": "urltest",
+            "type": "selector",
             "outbounds": [
                 "{all}"
             ],
