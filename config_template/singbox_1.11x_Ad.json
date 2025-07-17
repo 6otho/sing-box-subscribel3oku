@@ -83,7 +83,7 @@
   ],
   "outbounds": [
     {
-      "tag":"Proxy",
+      "tag":"🚀 节点选择",
       "type":"selector",
       "outbounds":[
         "auto",
@@ -92,205 +92,205 @@
       ]
     },
     {
-      "tag":"OpenAI",
+      "tag":"🤖 OpenAI",
       "type":"selector",
       "outbounds":[
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
       ],
-      "default": "America"
+      "default": "🇺🇸 美国自动"
     },
     {
-      "tag":"Google",
+      "tag":"🔍 Google",
       "type":"selector",
       "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
       ]
     },
     {
-      "tag":"Telegram",
+      "tag":"💬 Telegram",
       "type":"selector",
       "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
       ]
     },
     {
-      "tag":"Twitter",
+      "tag":"✖️ Twitter",
       "type":"selector",
       "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "HongKong"🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
       ]
     },
     {
-      "tag":"Facebook",
+      "tag":"📖 Facebook",
       "type":"selector",
       "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
       ]
     },
     {
-      "tag":"BiliBili",
+      "tag":"🍿 BiliBili",
       "type":"selector",
       "outbounds":[
         "direct",
-        "HongKong",
-        "TaiWan"
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动"
       ]
     },
     {
-      "tag":"Bahamut",
+      "tag":"▶️ Bahamut",
       "type":"selector",
       "outbounds":[
-        "TaiWan",
-        "Proxy"
+        "🇹🇼 台湾自动",
+        "🚀 节点选择"
       ]
     },
     {
-      "tag":"Spotify",
+      "tag":"🎵 Spotify",
       "type":"selector",
       "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
       ],
-      "default": "America"
+      "default": "🇺🇸 美国自动"
     },
     {
-      "tag":"TikTok",
+      "tag":"📹 TikTok",
       "type":"selector",
       "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America"
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
       ],
-      "default": "Japan"
+      "default": "🇯🇵 日本自动"
     },
     {
-      "tag":"Netflix",
+      "tag":"🎥 Netflix",
       "type":"selector",
       "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
       ]
     },
     {
-      "tag":"Disney+",
+      "tag":"🐭 Disney+",
       "type":"selector",
       "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
       ]
     },
     {
-      "tag":"Apple",
-      "type":"selector",
-      "outbounds":[
-        "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ]
-    },
-    {
-      "tag":"Microsoft",
+      "tag":"🍎 Apple",
       "type":"selector",
       "outbounds":[
         "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
       ]
     },
     {
-      "tag":"Games",
+      "tag":"📘 Microsoft",
       "type":"selector",
       "outbounds":[
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
         "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "🌍 全球自动"
       ]
     },
     {
-      "tag":"Streaming",
+      "tag":"🎮 Games",
       "type":"selector",
       "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "direct",
+        "🌍 全球自动"
       ]
     },
     {
-      "tag":"Global",
+      "tag":"🗄️ Streaming",
+      "type":"selector",
+      "outbounds":[
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
+      ]
+    },
+    {
+      "tag":"🌍 Global",
       "type":"selector",
       "outbounds":[ 
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others",
+        "🇭🇰 香港自动",
+        "🇹🇼 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动",
+        "🌍 全球自动"
         "direct"
       ]
     },
     {
-      "tag":"China",
+      "tag":"🇨🇳 China",
       "type":"selector",
       "outbounds":[
         "direct",
-        "Proxy"
+        "🚀 节点选择"
       ]
     },
     {
-      "tag":"HongKong",
+      "tag":"🇭🇰 香港自动",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -300,7 +300,7 @@
       ]
     },
     {
-      "tag":"TaiWan",
+      "tag":"🇹🇼 台湾自动",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -310,7 +310,7 @@
       ]
     },
     {
-      "tag":"Singapore",
+      "tag":"🇸🇬 新加坡自动",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -320,7 +320,7 @@
       ]
     },
     {
-      "tag":"Japan",
+      "tag":"🇯🇵 日本自动",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -330,7 +330,7 @@
       ]
     },
     {
-      "tag":"America",
+      "tag":"🇺🇸 美国自动",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -340,7 +340,7 @@
       ]
     },
     {
-      "tag":"Others",
+      "tag":"🌍 全球自动",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -396,7 +396,7 @@
       {
         "rule_set": "geosite-category-ads-all",
         "clash_mode": "global",
-        "outbound": "Proxy"
+        "outbound": "🚀 节点选择"
       },
       {
         "clash_mode": "direct",
@@ -404,7 +404,7 @@
       },
       {
         "clash_mode": "global",
-        "outbound": "Proxy"
+        "outbound": "🚀 节点选择"
       },
       {
         "domain": [
@@ -421,71 +421,71 @@
       },
       {
         "rule_set": "geosite-openai",
-        "outbound": "OpenAI"
+        "outbound": "🤖 OpenAI"
       },
       {
         "rule_set": ["geosite-youtube", "geoip-google", "geosite-google", "geosite-github"],
-        "outbound": "Google"
+        "outbound": "🔍 Google"
       },
       {
         "rule_set": ["geoip-telegram", "geosite-telegram"],
-        "outbound": "Telegram"
+        "outbound": "💬 Telegram"
       },
       {
         "rule_set": ["geoip-twitter", "geosite-twitter"],
-        "outbound": "Twitter"
+        "outbound": "✖️ Twitter"
       },
       {
         "rule_set":["geoip-facebook", "geosite-facebook"],
-        "outbound": "Facebook"
+        "outbound": "📖 Facebook"
       },
       {
         "rule_set": "geosite-bilibili",
-        "outbound": "BiliBili"
+        "outbound": "🍿 BiliBil"
       },
       {
         "rule_set": "geosite-bahamut",
-        "outbound": "Bahamut"
+        "outbound": "▶️ Bahamut"
       },
       {
         "rule_set": "geosite-spotify",
-        "outbound": "Spotify"
+        "outbound": "🎵 Spotify"
       },
       {
         "rule_set": "geosite-tiktok",
-        "outbound": "TikTok"
+        "outbound": "📹 TikTok"
       },
       {
         "rule_set": ["geoip-netflix", "geosite-netflix"],
-        "outbound": "Netflix"
+        "outbound": "🎥 Netflix"
       },
       {
         "rule_set": "geosite-disney",
-        "outbound": "Disney+"
+        "outbound": "🐭 Disney+"
       },
       {
         "rule_set": ["geoip-apple", "geosite-apple", "geosite-amazon"],
-        "outbound": "Apple"
+        "outbound": "🍎 Apple"
       },
       {
         "rule_set": "geosite-microsoft",
-        "outbound": "Microsoft"
+        "outbound": "📘 Microsoft"
       },
       {
         "rule_set": ["geosite-category-games", "geosite-dmm"],
-        "outbound": "Games"
+        "outbound": "you do 🎮 Games"
       },
       {
         "rule_set": ["geosite-hbo", "geosite-primevideo"],
-        "outbound": "Streaming"
+        "outbound": "🗄️ Streaming"
       },
       {
         "rule_set": "geosite-geolocation-!cn",
-        "outbound": "Global"
+        "outbound": "🌍 Global"
       },
       {
         "rule_set": ["geoip-cn", "geosite-cn"],
-        "outbound": "China"
+        "outbound": "🇨🇳 China"
       }
     ],
     "rule_set": [
