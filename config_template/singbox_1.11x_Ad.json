@@ -277,7 +277,7 @@
         "🇸🇬 新加坡自动",
         "🇯🇵 日本自动",
         "🇺🇸 美国自动",
-        "🌍 全球自动"
+        "🌍 全球自动",
         "direct"
       ]
     },
@@ -441,7 +441,7 @@
       },
       {
         "rule_set": "geosite-bilibili",
-        "outbound": "🍿 BiliBil"
+        "outbound": "🍿 BiliBili"
       },
       {
         "rule_set": "geosite-bahamut",
