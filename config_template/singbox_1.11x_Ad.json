@@ -95,60 +95,60 @@
       "tag":"🤖 OpenAI",
       "type":"selector",
       "outbounds":[
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other"
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other"
       ],
-      "default": "🇺🇸 United States"
+      "default": "United States"
     },
     {
       "tag":"🔍 Google",
       "type":"selector",
       "outbounds":[
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other"
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other"
       ]
     },
     {
       "tag":"💬 Telegram",
       "type":"selector",
       "outbounds":[
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other"
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other"
       ]
     },
     {
       "tag":"✖️ Twitter",
       "type":"selector",
       "outbounds":[
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other"
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other"
       ]
     },
     {
       "tag":"📖 Facebook",
       "type":"selector",
       "outbounds":[
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other"
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other"
       ]
     },
     {
@@ -156,15 +156,15 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan"
+        "HongKong",
+        "Taiwan"
       ]
     },
     {
       "tag":"▶️ Bahamut",
       "type":"selector",
       "outbounds":[
-        "🇹🇼 Taiwan",
+        "Taiwan",
         "🚀 Proxy"
       ]
     },
@@ -172,49 +172,49 @@
       "tag":"🎵 Spotify",
       "type":"selector",
       "outbounds":[
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other"
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other"
       ],
-      "default": "🇺🇸 United States"
+      "default": "United States"
     },
     {
       "tag":"📹 TikTok",
       "type":"selector",
       "outbounds":[
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other"
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other"
       ],
-      "default": "🇯🇵 Japan"
+      "default": "Japan"
     },
     {
       "tag":"🎥 Netflix",
       "type":"selector",
       "outbounds":[
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other"
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other"
       ]
     },
     {
       "tag":"🐭 Disney+",
       "type":"selector",
       "outbounds":[
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other"
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other"
       ]
     },
     {
@@ -222,62 +222,62 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other"
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other"
       ]
     },
     {
       "tag":"📘 Microsoft",
       "type":"selector",
       "outbounds":[
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
         "direct",
-        "🌍 Other"
+        "Other"
       ]
     },
     {
       "tag":"🎮 Games",
       "type":"selector",
       "outbounds":[
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
         "direct",
-        "🌍 Other"
+        "Other"
       ]
     },
     {
       "tag":"🗄️ Streaming",
       "type":"selector",
       "outbounds":[
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other"
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other"
       ]
     },
     {
-      "tag":"🌍 Global",
+      "tag":"Global",
       "type":"selector",
       "outbounds":[ 
-        "🇭🇰 HongKong",
-        "🇹🇼 Taiwan",
-        "🇸🇬 Singapore",
-        "🇯🇵 Japan",
-        "🇺🇸 United States",
-        "🌍 Other",
+        "HongKong",
+        "Taiwan",
+        "Singapore",
+        "Japan",
+        "United States",
+        "Other",
         "direct"
       ]
     },
@@ -290,7 +290,7 @@
       ]
     },
     {
-      "tag":"🇭🇰 HongKong",
+      "tag":"HongKong",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -300,7 +300,7 @@
       ]
     },
     {
-      "tag":"🇹🇼 Taiwan",
+      "tag":"Taiwan",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -310,7 +310,7 @@
       ]
     },
     {
-      "tag":"🇸🇬 Singapore",
+      "tag":"Singapore",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -320,7 +320,7 @@
       ]
     },
     {
-      "tag":"🇯🇵 Japan",
+      "tag":"Japan",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -330,7 +330,7 @@
       ]
     },
     {
-      "tag":"🇺🇸 United States",
+      "tag":"United States",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -340,7 +340,7 @@
       ]
     },
     {
-      "tag":"🌍 Other",
+      "tag":"Other",
       "type":"selector",
       "outbounds":[
         "{all}"
@@ -481,7 +481,7 @@
       },
       {
         "rule_set": "geosite-geolocation-!cn",
-        "outbound": "🌍 Global"
+        "outbound": "Global"
       },
       {
         "rule_set": ["geoip-cn", "geosite-cn"],
