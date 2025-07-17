@@ -58,10 +58,6 @@
         ],
         "rules": [
             {
-                "outbound": "any",
-                "server": "DIRECT-DNS"
-            },
-            {
                 "clash_mode": "direct",
                 "server": "DIRECT-DNS"
             },
@@ -96,7 +92,7 @@
             "tag": "tun-in",
             "type": "tun",
             "address": [
-                "172.19.0.0/30"
+                "172.33.0.1/30"
             ],
             "mtu": 9000,
             "auto_route": true,
@@ -1142,7 +1138,7 @@
                 "tag": "geosite-spotify",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/spotify.srs",
+                "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/spotify.srs",
                 "download_detour": "🎯 全球直连"
             },
             {
