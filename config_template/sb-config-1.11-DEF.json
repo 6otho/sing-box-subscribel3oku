@@ -293,7 +293,6 @@
       "tag":"🇭🇰HongKong",
       "type":"urltest",
       "outbounds":[
-        "🚀Proxy",
         "{all}"
       ],
       "filter":[
@@ -307,51 +306,58 @@
       "tag":"🇨🇳TaiWan",
       "type":"selector",
       "outbounds":[
-        "🚀Proxy",
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan|🚀"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"🇸🇬Singapore",
       "type":"selector",
       "outbounds":[
-        "🚀Proxy",
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore|🚀"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"🇯🇵Japan",
       "type":"selector",
       "outbounds":[
-        "🚀Proxy",
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan|🚀"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"🇺🇸America",
       "type":"selector",
       "outbounds":[
-        "🚀Proxy",
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|🚀|United States"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"🌐Others",
       "type":"selector",
       "outbounds":[
-        "🚀Proxy",
         "{all}"
       ],
       "filter":[
