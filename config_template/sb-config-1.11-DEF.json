@@ -291,14 +291,17 @@
     },
     {
       "tag":"🇭🇰HongKong",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "🚀Proxy",
         "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong|🚀"]}
-      ]
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"🇨🇳TaiWan",
