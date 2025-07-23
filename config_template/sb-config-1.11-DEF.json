@@ -293,6 +293,7 @@
       "tag":"🇭🇰HongKong",
       "type":"selector",
       "outbounds":[
+        "🚀Proxy",
         "{all}"
       ],
       "filter":[
@@ -303,6 +304,7 @@
       "tag":"🇨🇳TaiWan",
       "type":"selector",
       "outbounds":[
+        "🚀Proxy",
         "{all}"
       ],
       "filter":[
@@ -313,6 +315,7 @@
       "tag":"🇸🇬Singapore",
       "type":"selector",
       "outbounds":[
+        "🚀Proxy",
         "{all}"
       ],
       "filter":[
@@ -323,6 +326,7 @@
       "tag":"🇯🇵Japan",
       "type":"selector",
       "outbounds":[
+        "🚀Proxy",
         "{all}"
       ],
       "filter":[
@@ -333,6 +337,7 @@
       "tag":"🇺🇸America",
       "type":"selector",
       "outbounds":[
+        "🚀Proxy",
         "{all}"
       ],
       "filter":[
@@ -343,6 +348,7 @@
       "tag":"🌐Others",
       "type":"selector",
       "outbounds":[
+        "🚀Proxy",
         "{all}"
       ],
       "filter":[
@@ -353,6 +359,7 @@
       "tag":"auto",
       "type":"urltest",
       "outbounds":[
+        "🚀Proxy",
         "{all}"
       ],
       "filter":[
