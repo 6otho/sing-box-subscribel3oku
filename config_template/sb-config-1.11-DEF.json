@@ -296,7 +296,7 @@
         "{all}"
       ],
       "filter":[
-        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
+        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong|🚀"]}
       ]
     },
     {
@@ -306,7 +306,7 @@
         "{all}"
       ],
       "filter":[
-        {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
+        {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan|🚀"]}
       ]
     },
     {
@@ -316,7 +316,7 @@
         "{all}"
       ],
       "filter":[
-        {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
+        {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore|🚀"]}
       ]
     },
     {
@@ -326,7 +326,7 @@
         "{all}"
       ],
       "filter":[
-        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
+        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan|🚀"]}
       ]
     },
     {
@@ -336,7 +336,7 @@
         "{all}"
       ],
       "filter":[
-        {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
+        {"action":"include","keywords":["🇺🇸|US|us|美国|美|🚀|United States"]}
       ]
     },
     {
@@ -346,7 +346,7 @@
         "{all}"
       ],
       "filter":[
-        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美"]}
+        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美|🚀"]}
       ]
     },
     {
@@ -356,7 +356,7 @@
         "{all}"
       ],
       "filter":[
-        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}
+        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效|🚀"]}
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
