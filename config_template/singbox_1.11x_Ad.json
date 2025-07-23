@@ -49,7 +49,7 @@
                 "tag": "PROXY-DNS",
                 "address_resolver": "local",
                 "address": "https://dns.google/dns-query",
-                "detour": "🚀 节点选择"
+                "detour": "Proxy"
             },
             {
                 "tag": "FAKEIP-DNS",
@@ -128,7 +128,7 @@
             "udp_over_tcp": false
         },
         {
-            "tag": "🚀 节点选择",
+            "tag": "Proxy",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
@@ -148,7 +148,7 @@
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -164,7 +164,7 @@
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -173,14 +173,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "🎥 TikTok",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -196,7 +196,7 @@
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -205,14 +205,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "🎵 Spotify",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -228,7 +228,7 @@
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -237,14 +237,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "📹 Netflix",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -253,14 +253,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
          },
          {
             "tag": "🔍 Google",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -269,14 +269,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "📖 Microsoft",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -285,14 +285,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "🍎 Apple",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -301,7 +301,7 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "🎯 全球直连",
@@ -309,7 +309,7 @@
             "interrupt_exist_connections": true,
             "outbounds": [
                 "🌐 全球自动",
-                "🚀 节点选择",
+                "Proxy",
                 "🇨🇳 全局直连"
              ],
             "default": "🇨🇳 全局直连"
@@ -321,7 +321,7 @@
             "outbounds": [
                 "🚫 拒绝连接",
                 "🎯 全球直连",
-                "🚀 节点选择"
+                "Proxy"
             ]
         },
         {
@@ -331,7 +331,7 @@
             "outbounds": [
                 "🚫 拒绝连接",
                 "🎯 全球直连",
-                "🚀 节点选择"
+                "Proxy"
             ]
         },
         {
@@ -341,14 +341,14 @@
             "outbounds": [
                 "🚫 拒绝连接",
                 "🎯 全球直连",
-                "🚀 节点选择"
+                "Proxy"
             ]
         },
         {
             "tag": "🇭🇰 香港自动",
             "type": "urltest",
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "{all}"
             ],
             "filter": [
@@ -372,7 +372,7 @@
             "tag": "🇨🇳 台湾自动",
             "type": "urltest",
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "{all}"
             ],
             "filter": [
@@ -395,7 +395,7 @@
             "tag": "🇸🇬 新加坡自动",
             "type": "urltest",
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "{all}"
             ],
             "filter": [
@@ -418,7 +418,7 @@
             "tag": "🇯🇵 日本自动",
             "type": "urltest",
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "{all}"
             ],
             "filter": [
@@ -441,7 +441,7 @@
             "tag": "🇰🇷 韩国自动",
             "type": "urltest",
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "{all}"
             ],
             "filter": [
@@ -465,7 +465,7 @@
             "tag": "🇺🇸 美国自动",
             "type": "urltest",
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "{all}"
             ],
             "filter": [
@@ -519,7 +519,7 @@
     ],
     "route": {
         "auto_detect_interface": true,
-        "final": "🚀 节点选择",
+        "final": "Proxy",
         "rules": [
             {
                 "action": "sniff"
