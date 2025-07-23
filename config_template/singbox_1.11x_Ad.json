@@ -339,7 +339,7 @@
             "tag": "🇭🇰 香港自动",
             "type": "urltest",
             "outbounds": [
-                "{all}"
+                "Proxy"
             ],
             "filter": [
                 {
@@ -355,7 +355,7 @@
             "tag": "🇨🇳 台湾自动",
             "type": "urltest",
             "outbounds": [
-                "{all}"
+                "Proxy"
             ],
             "filter": [
                 {
@@ -371,7 +371,7 @@
             "tag": "🇸🇬 新加坡自动",
             "type": "urltest",
             "outbounds": [
-                "{all}"
+                "Proxy"
             ],
             "filter": [
                 {
@@ -387,7 +387,7 @@
             "tag": "🇯🇵 日本自动",
             "type": "urltest",
             "outbounds": [
-                "{all}"
+                "Proxy"
             ],
             "filter": [
                 {
@@ -403,7 +403,7 @@
             "tag": "🇰🇷 韩国自动",
             "type": "urltest",
             "outbounds": [
-                "{all}"
+                "Proxy"
             ],
             "filter": [
                 {
@@ -419,7 +419,7 @@
             "tag": "🇺🇸 美国自动",
             "type": "urltest",
             "outbounds": [
-                "{all}"
+                "Proxy"
             ],
             "filter": [
                 {
