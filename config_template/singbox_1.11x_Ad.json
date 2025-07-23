@@ -134,6 +134,7 @@
             "outbounds": [
                 "{all}"
             ]
+        },
         {
             "tag": "🤖 AI",
             "type": "selector",
