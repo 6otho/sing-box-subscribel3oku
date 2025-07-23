@@ -22,7 +22,7 @@
       {
         "tag": "proxyDns",
         "address": "tls://8.8.8.8",
-        "detour": "🚀Proxy"
+        "detour": "Proxy"
       },
       {
         "tag": "localDns",
@@ -83,7 +83,7 @@
   ],
   "outbounds": [
     {
-      "tag":"🚀Proxy",
+      "tag":"Proxy",
       "type":"selector",
       "outbounds":[
         "auto",
@@ -165,7 +165,7 @@
       "type":"selector",
       "outbounds":[
         "🇨🇳TaiWan",
-        "🚀Proxy"
+        "Proxy"
       ]
     },
     {
@@ -286,7 +286,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "🚀Proxy"
+        "Proxy"
       ]
     },
     {
@@ -384,7 +384,7 @@
   ],
   "route": {
     "auto_detect_interface": true,
-    "final": "🚀Proxy",
+    "final": "Proxy",
     "rules": [
       {
         "inbound": ["tun-in", "mixed-in"],
@@ -411,7 +411,7 @@
       {
         "rule_set": "geosite-category-ads-all",
         "clash_mode": "global",
-        "outbound": "🚀Proxy"
+        "outbound": "Proxy"
       },
       {
         "clash_mode": "direct",
@@ -419,7 +419,7 @@
       },
       {
         "clash_mode": "global",
-        "outbound": "🚀Proxy"
+        "outbound": "Proxy"
       },
       {
         "domain": [
