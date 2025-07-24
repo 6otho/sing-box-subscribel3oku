@@ -49,7 +49,7 @@
                 "tag": "PROXY-DNS",
                 "address_resolver": "local",
                 "address": "https://dns.google/dns-query",
-                "detour": "🚀 节点选择"
+                "detour": "Proxy"
             },
             {
                 "tag": "FAKEIP-DNS",
@@ -128,27 +128,19 @@
             "udp_over_tcp": false
         },
         {
-            "tag": "🚀 节点选择",
+            "tag": "Proxy",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "{all}",
-                "🇭🇰 香港自动",
-                "🇨🇳 台湾自动",
-                "🇸🇬 新加坡自动",
-                "🇯🇵 日本自动",
-                "🇰🇷 韩国自动",
-                "🇺🇸 美国自动",
-                "🌐 全球自动"
-            ],
-            "default": "🇸🇬 新加坡自动"
+                "{all}"
+            ]
         },
         {
             "tag": "🤖 AI",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -164,7 +156,7 @@
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -173,14 +165,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "🎥 TikTok",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -196,7 +188,7 @@
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -205,14 +197,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "🎵 Spotify",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -228,7 +220,7 @@
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -237,14 +229,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "📹 Netflix",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -253,14 +245,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
          },
          {
             "tag": "🔍 Google",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -269,14 +261,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "📖 Microsoft",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -285,14 +277,14 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "🍎 Apple",
             "type": "selector",
             "interrupt_exist_connections": true,
             "outbounds": [
-                "🚀 节点选择",
+                "Proxy",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 新加坡自动",
@@ -301,7 +293,7 @@
                 "🇺🇸 美国自动",
                 "🌐 全球自动"
             ],
-            "default": "🚀 节点选择"
+            "default": "Proxy"
         },
         {
             "tag": "🎯 全球直连",
@@ -309,7 +301,7 @@
             "interrupt_exist_connections": true,
             "outbounds": [
                 "🌐 全球自动",
-                "🚀 节点选择",
+                "Proxy",
                 "🇨🇳 全局直连"
              ],
             "default": "🇨🇳 全局直连"
@@ -321,7 +313,7 @@
             "outbounds": [
                 "🚫 拒绝连接",
                 "🎯 全球直连",
-                "🚀 节点选择"
+                "Proxy"
             ]
         },
         {
@@ -331,7 +323,7 @@
             "outbounds": [
                 "🚫 拒绝连接",
                 "🎯 全球直连",
-                "🚀 节点选择"
+                "Proxy"
             ]
         },
         {
@@ -341,7 +333,7 @@
             "outbounds": [
                 "🚫 拒绝连接",
                 "🎯 全球直连",
-                "🚀 节点选择"
+                "Proxy"
             ]
         },
         {
@@ -353,14 +345,7 @@
             "filter": [
                 {
                     "action": "include",
-                    "keywords": [
-                        "^.*\\.(hk|香港|港)$",
-                        "🇭🇰",
-                        "HK",
-                        "hk",
-                        "HongKong",
-                        "Hong\\s?Kong"
-                    ]
+                    "keywords": ["🇭🇰|HK|hk|香港|港|HongKong"]
                 }
             ],
             "url": "http://www.gstatic.com/generate_204",
@@ -376,13 +361,7 @@
             "filter": [
                 {
                     "action": "include",
-                    "keywords": [
-                        "^.*\\.(tw|台湾|臺灣|台)$",
-                        "🇹🇼",
-                        "TW",
-                        "tw",
-                        "Taiwan"
-                    ]
+                    "keywords": ["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]
                 }
             ],
             "url": "http://www.gstatic.com/generate_204",
@@ -398,13 +377,7 @@
             "filter": [
                 {
                     "action": "include",
-                    "keywords": [
-                        "^.*\\.(sg|新加坡|狮城)$",
-                        "🇸🇬",
-                        "SG",
-                        "sg",
-                        "Singapore"
-                    ]
+                    "keywords": ["🇸🇬|SG|sg|新加坡|狮|Singapore"]
                 }
             ],
             "url": "http://www.gstatic.com/generate_204",
@@ -420,13 +393,7 @@
             "filter": [
                 {
                     "action": "include",
-                    "keywords": [
-                        "^.*\\.(jp|日本)$",
-                        "🇯🇵",
-                        "JP",
-                        "jp",
-                        "Japan"
-                    ]
+                    "keywords": ["🇯🇵|JP|jp|日本|日|Japan"]
                 }
             ],
             "url": "http://www.gstatic.com/generate_204",
@@ -442,14 +409,7 @@
             "filter": [
                 {
                     "action": "include",
-                    "keywords": [
-                        "^.*\\.(kr|韩国)$",
-                        "🇰🇷",
-                        "KR",
-                        "kr",
-                        "Korea",
-                        "South\\s?Korea"
-                    ]
+                    "keywords": ["🇰🇷|KR|kr|韩国|韩|Korea|South Korea"]
                 }
             ],
             "url": "http://www.gstatic.com/generate_204",
@@ -465,13 +425,7 @@
             "filter": [
                 {
                     "action": "include",
-                    "keywords": [
-                        "^.*\\.(us|美国)$",
-                        "🇺🇸",
-                        "US",
-                        "us",
-                        "United\\s?States"
-                    ]
+                    "keywords": ["🇺🇸|US|us|美国|美|United States"]
                 }
             ],
             "url": "http://www.gstatic.com/generate_204",
@@ -513,7 +467,7 @@
     ],
     "route": {
         "auto_detect_interface": true,
-        "final": "🚀 节点选择",
+        "final": "Proxy",
         "rules": [
             {
                 "action": "sniff"
