@@ -133,11 +133,11 @@
             "interrupt_exist_connections": true,
             "outbounds": [
                 "{all}",
-                "auto"
+                "自动选择"
             ]
         },
         {
-           "tag":"auto",
+           "tag":"自动选择",
            "type":"urltest",
            "outbounds":[
             "{all}"
