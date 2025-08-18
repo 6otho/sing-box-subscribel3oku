@@ -30,56 +30,17 @@
             "inet6_range": "fc00::/18"
         },
         "servers": [
-            {
-                "tag": "local",
-                "address": "local",
-                "detour": "🎯 全球直连"
-            },
-            {
-                "tag": "DIRECT-DNS",
-                "address_resolver": "local",
-                "address": "https://dns.alidns.com/dns-query",
-                "detour": "🎯 全球直连"
-            },
-            {
-                "tag": "PROXY-DNS",
-                "address_resolver": "local",
-                "address": "https://dns.google/dns-query",
-                "detour": "🚀 节点选择"
-            },
-            {
-                "tag": "FAKEIP-DNS",
-                "address": "fakeip"
-            }
+            { "tag": "local", "address": "local", "detour": "🎯 全球直连" },
+            { "tag": "DIRECT-DNS", "address_resolver": "local", "address": "https://dns.alidns.com/dns-query", "detour": "🎯 全球直连" },
+            { "tag": "PROXY-DNS", "address_resolver": "local", "address": "https://dns.google/dns-query", "detour": "🚀 节点选择" },
+            { "tag": "FAKEIP-DNS", "address": "fakeip" }
         ],
         "rules": [
-            {
-                "outbound": "any",
-                "server": "DIRECT-DNS"
-            },
-            {
-                "clash_mode": "direct",
-                "server": "DIRECT-DNS"
-            },
-            {
-                "clash_mode": "global",
-                "server": "PROXY-DNS"
-            },
-            {
-                "rule_set": [
-                    "geosite-cn",
-                    "geosite-private"
-                ],
-                "server": "DIRECT-DNS"
-            },
-            {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "server": "FAKEIP-DNS",
-                "rewrite_ttl": 1
-            }
+            { "outbound": "any", "server": "DIRECT-DNS" },
+            { "clash_mode": "direct", "server": "DIRECT-DNS" },
+            { "clash_mode": "global", "server": "PROXY-DNS" },
+            { "rule_set": ["geosite-cn", "geosite-private"], "server": "DIRECT-DNS" },
+            { "query_type": ["A", "AAAA"], "server": "FAKEIP-DNS", "rewrite_ttl": 1 }
         ],
         "disable_cache": true,
         "disable_expire": true,
@@ -91,9 +52,7 @@
         {
             "tag": "tun-in",
             "type": "tun",
-            "address": [
-                "172.19.0.0/30"
-            ],
+            "address": ["172.19.0.0/30"],
             "mtu": 9000,
             "auto_route": true,
             "strict_route": true,
@@ -112,7 +71,7 @@
             "listen": "127.0.0.1",
             "listen_port": 2080
         }
-    },
+    ],
     "outbounds": [
         {
             "tag": "🚀 节点选择",
@@ -123,144 +82,24 @@
                 "{auto}"
             ]
         },
-        {
-            "tag": "🇨🇳 全局直连",
-            "type": "direct"
-        },
-        {
-            "tag": "🚫 拒绝连接",
-            "type": "block"
-        },
-        {
-            "tag": "🌵 手动选择",
-            "type": "selector",
-            "outbounds": [
-                "{all}"
-            ]
-        },
-        {
-            "tag": "♻️ 自动选择",
-            "type": "urltest",
-            "outbounds": [
-                "{all}"
-            ],
-            "url": "https://www.gstatic.com/generate_204",
-            "interval": "3m",
-            "tolerance": 150
-        },
-        {
-            "tag": "🤖 AI",
-            "type": "selector",
-            "outbounds": [
-                "🚀 节点选择", "🇺🇸 美国自动", "🇯🇵 日本自动", "🇸🇬 新加坡自动", "🇭🇰 香港自动", "🇹🇼 台湾自动"
-            ],
-            "default": "🇺🇸 美国自动"
-        },
-        {
-            "tag": "📲 Telegram",
-            "type": "selector",
-            "outbounds": [
-                "🚀 节点选择", "🇸🇬 新加坡自动", "🇭🇰 香港自动", "🇯🇵 日本自动", "🇺🇸 美国自动"
-            ],
-            "default": "🚀 节点选择"
-        },
-        {
-            "tag": "🎥 TikTok",
-            "type": "selector",
-            "outbounds": [
-                "🚀 节点选择", "🇸🇬 新加坡自动", "🇯🇵 日本自动", "🇹🇼 台湾自动", "🇺🇸 美国自动"
-            ],
-            "default": "🇸🇬 新加坡自动"
-        },
-        {
-            "tag": "📺 YouTube",
-            "type": "selector",
-            "outbounds": [
-                "🚀 节点选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇸🇬 新加坡自动", "🇯🇵 日本自动", "🇺🇸 美国自动"
-            ],
-            "default": "🚀 节点选择"
-        },
-        {
-            "tag": "🎵 Spotify",
-            "type": "selector",
-            "outbounds": [
-                "🚀 节点选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇸🇬 新加坡自动", "🇯🇵 日本自动", "🇺🇸 美国自动"
-            ],
-            "default": "🇭🇰 香港自动"
-        },
-        {
-            "tag": "🌵 Line",
-            "type": "selector",
-            "outbounds": [
-                "🚀 节点选择", "🇯🇵 日本自动", "🇹🇼 台湾自动", "🇭🇰 香港自动"
-            ],
-            "default": "🚀 节点选择"
-        },
-        {
-            "tag": "📹 Netflix",
-            "type": "selector",
-            "outbounds": [
-                "🚀 节点选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇸🇬 新加坡自动", "🇯🇵 日本自动", "🇺🇸 美国自动"
-            ],
-            "default": "🚀 节点选择"
-        },
-        {
-            "tag": "🔍 Google",
-            "type": "selector",
-            "outbounds": [
-                "🚀 节点选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇸🇬 新加坡自动", "🇯🇵 日本自动", "🇺🇸 美国自动"
-            ],
-            "default": "🚀 节点选择"
-        },
-        {
-            "tag": "📖 Microsoft",
-            "type": "selector",
-            "outbounds": [
-                "🚀 节点选择", "🇺🇸 美国自动", "🇸🇬 新加坡自动", "🇭🇰 香港自动"
-            ],
-            "default": "🚀 节点选择"
-        },
-        {
-            "tag": "🍎 Apple",
-            "type": "selector",
-            "outbounds": [
-                "🚀 节点选择", "🇺🇸 美国自动", "🇭🇰 香港自动", "🇨🇳 全局直连"
-            ],
-            "default": "🚀 节点选择"
-        },
-        {
-            "tag": "🎯 全球直连",
-            "type": "selector",
-            "outbounds": [
-                "🇨🇳 全局直连",
-                "🚀 节点选择"
-            ],
-            "default": "🇨🇳 全局直连"
-        },
-        {
-            "tag": "🪧 广告拦截",
-            "type": "selector",
-            "outbounds": [
-                "🚫 拒绝连接",
-                "🇨🇳 全局直连"
-            ]
-        },
-        {
-            "tag": "💧 泄漏拦截",
-            "type": "selector",
-            "outbounds": [
-                "🚫 拒绝连接",
-                "🚀 节点选择"
-            ]
-        },
-        {
-            "tag": "🔎 HttpDNS",
-            "type": "selector",
-            "outbounds": [
-                "🚫 拒绝连接",
-                "🚀 节点选择"
-            ]
-        },
+        { "tag": "🇨🇳 全局直连", "type": "direct" },
+        { "tag": "🚫 拒绝连接", "type": "block" },
+        { "tag": "🌵 手动选择", "type": "selector", "outbounds": ["{all}"] },
+        { "tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150 },
+        { "tag": "🤖 AI", "type": "selector", "outbounds": ["🚀 节点选择", "🇺🇸 美国自动", "🇯🇵 日本自动", "🇸🇬 新加坡自动", "🇭🇰 香港自动", "🇹🇼 台湾自动"], "default": "🇺🇸 美国自动" },
+        { "tag": "📲 Telegram", "type": "selector", "outbounds": ["🚀 节点选择", "🇸🇬 新加坡自动", "🇭🇰 香港自动", "🇯🇵 日本自动", "🇺🇸 美国自动"], "default": "🚀 节点选择" },
+        { "tag": "🎥 TikTok", "type": "selector", "outbounds": ["🚀 节点选择", "🇸🇬 新加坡自动", "🇯🇵 日本自动", "🇹🇼 台湾自动", "🇺🇸 美国自动"], "default": "🇸🇬 新加坡自动" },
+        { "tag": "📺 YouTube", "type": "selector", "outbounds": ["🚀 节点选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇸🇬 新加坡自动", "🇯🇵 日本自动", "🇺🇸 美国自动"], "default": "🚀 节点选择" },
+        { "tag": "🎵 Spotify", "type": "selector", "outbounds": ["🚀 节点选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇸🇬 新加坡自动", "🇯🇵 日本自动", "🇺🇸 美国自动"], "default": "🇭🇰 香港自动" },
+        { "tag": "🌵 Line", "type": "selector", "outbounds": ["🚀 节点选择", "🇯🇵 日本自动", "🇹🇼 台湾自动", "🇭🇰 香港自动"], "default": "🚀 节点选择" },
+        { "tag": "📹 Netflix", "type": "selector", "outbounds": ["🚀 节点选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇸🇬 新加坡自动", "🇯🇵 日本自动", "🇺🇸 美国自动"], "default": "🚀 节点选择" },
+        { "tag": "🔍 Google", "type": "selector", "outbounds": ["🚀 节点选择", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇸🇬 新加坡自动", "🇯🇵 日本自动", "🇺🇸 美国自动"], "default": "🚀 节点选择" },
+        { "tag": "📖 Microsoft", "type": "selector", "outbounds": ["🚀 节点选择", "🇺🇸 美国自动", "🇸🇬 新加坡自动", "🇭🇰 香港自动"], "default": "🚀 节点选择" },
+        { "tag": "🍎 Apple", "type": "selector", "outbounds": ["🚀 节点选择", "🇺🇸 美国自动", "🇭🇰 香港自动", "🇨🇳 全局直连"], "default": "🚀 节点选择" },
+        { "tag": "🎯 全球直连", "type": "selector", "outbounds": ["🇨🇳 全局直连", "🚀 节点选择"], "default": "🇨🇳 全局直连" },
+        { "tag": "🪧 广告拦截", "type": "selector", "outbounds": ["🚫 拒绝连接", "🇨🇳 全局直连"] },
+        { "tag": "💧 泄漏拦截", "type": "selector", "outbounds": ["🚫 拒绝连接", "🚀 节点选择"] },
+        { "tag": "🔎 HttpDNS", "type": "selector", "outbounds": ["🚫 拒绝连接", "🚀 节点选择"] },
         { "tag": "🇺🇸 美国自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇺🇸|\\bUS\\b|美国|United States|\\bCT\\b|UnitedStates"] }] },
         { "tag": "🇧🇷 巴西自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇧🇷|\\bBR\\b|巴西|Brazil"] }] },
         { "tag": "🇨🇳 中国自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇨🇳|\\bCN\\b|中国|China"] }] },
