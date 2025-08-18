@@ -139,7 +139,24 @@
         {
             "tag": "🔎 HttpDNS", "type": "selector", "interrupt_exist_connections": true, "outbounds": ["🚫 拒绝连接", "🎯 全球直连", "Proxy"]
         },
-        { "tag": "🇺🇸 美国自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇺🇸|\\bUS\\b|美国|United States|\\bCT\\b|UnitedStates"] }] },
+        {
+            "tag": "🇭🇰 香港自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇭🇰|HK|hk|香港|港|HongKong"]}], "url": "http://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 50
+        },
+        {
+            "tag": "🇹🇼 台湾自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}], "url": "http://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 50
+        },
+        {
+            "tag": "🇸🇬 新加坡自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇸🇬|SG|sg|新加坡|狮|Singapore"]}], "url": "http://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 50
+        },
+        {
+            "tag": "🇯🇵 日本自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇯🇵|JP|jp|日本|日|Japan"]}], "url": "http://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 50
+        },
+        {
+            "tag": "🇰🇷 韩国自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇰🇷|KR|kr|韩国|韩|Korea|South Korea"]}], "url": "http://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 50
+        },
+        {
+            "tag": "🇺🇸 美国自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["🇺🇸|US|us|美国|美|United States"]}], "url": "http://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 50
+        },
         { "tag": "🇧🇷 巴西自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇧🇷|\\bBR\\b|巴西|Brazil"] }] },
         { "tag": "🇨🇳 中国自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇨🇳|\\bCN\\b|中国|China"] }] },
         { "tag": "🇷🇺 俄罗斯自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇷🇺|\\bRU\\b|俄罗斯|Russian Federation|RussianFederation"] }] },
@@ -155,37 +172,14 @@
         { "tag": "🇧🇩 孟加拉国自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇧🇩|\\bBD\\b|孟加拉国|Bangladesh"] }] },
         { "tag": "🇳🇱 荷兰自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇳🇱|\\bNL\\b|荷兰|Netherlands|\\bAN\\b|Netherlands Antilles"] }] },
         { "tag": "🇮🇹 意大利自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇮🇹|\\bIT\\b|意大利|Italy"] }] },
-        { "tag": "🇭🇰 香港自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇭🇰|\\bHK\\b|香港|Hong Kong|HongKong"] }] },
         { "tag": "🇷🇴 罗马尼亚自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇷🇴|\\bRO\\b|罗马尼亚|Romania"] }] },
         { "tag": "🇪🇸 西班牙自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇪🇸|\\bES\\b|西班牙|Spain"] }] },
         { "tag": "🇦🇷 阿根廷自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇦🇷|\\bAR\\b|阿根廷|Argentina"] }] },
-        { "tag": "🇯🇵 日本自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇯🇵|\\bJP\\b|日本|Japan"] }] },
         { "tag": "🇨🇭 瑞士自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇨🇭|\\bCH\\b|瑞士|Switzerland"] }] },
-        { "tag": "🇰🇷 韩国自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇰🇷|\\bKR\\b|韩国|Korea, Republic of"] }] },
         { "tag": "🇹🇷 土耳其自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇹🇷|\\bTR\\b|土耳其|Turkey"] }] },
         { "tag": "🇸🇪 瑞典自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇸🇪|\\bSE\\b|瑞典|Sweden"] }] },
         { "tag": "🇻🇳 越南自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇻🇳|\\bVN\\b|越南|Viet Nam|VietNam"] }] },
-        { "tag": "🇿🇦 南非自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇿🇦|\\bZA\\b|南非|South Africa|SouthAfrica"] }] },
-        { "tag": "🇮🇷 伊朗自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇮🇷|\\bIR\\b|伊朗|Iran, Islamic Republic of"] }] },
-        { "tag": "🇧🇬 保加利亚自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇧🇬|\\bBG\\b|保加利亚|Bulgaria"] }] },
-        { "tag": "🇦🇹 奥地利自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇦🇹|\\bAT\\b|奥地利|Austria"] }] },
-        { "tag": "🇳🇿 新西兰自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇳🇿|\\bNZ\\b|新西兰|New Zealand|NewZealand"] }] },
-        { "tag": "🇲🇽 墨西哥自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇲🇽|\\bMX\\b|墨西哥|Mexico"] }] },
-        { "tag": "🇨🇿 捷克自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇨🇿|\\bCZ\\b|捷克|Czech Republic|CzechRepublic"] }] },
-        { "tag": "🇸🇬 新加坡自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇸🇬|\\bSG\\b|新加坡|Singapore"] }] },
-        { "tag": "🇵🇭 菲律宾自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇵🇭|\\bPH\\b|菲律宾|Philippines"] }] },
-        { "tag": "🇹🇭 泰国自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇹🇭|\\bTH\\b|泰国|Thailand"] }] },
-        { "tag": "🇨🇴 哥伦比亚自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇨🇴|\\bCO\\b|哥伦比亚|Colombia"] }] },
-        { "tag": "🇩🇰 丹麦自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇩🇰|\\bDK\\b|丹麦|Denmark"] }] },
-        { "tag": "🇹🇼 台湾自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇹🇼|\\bTW\\b|台湾|Taiwan|Tai wan"] }] },
-        { "tag": "🇳🇴 挪威自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇳🇴|\\bNO\\b|挪威|Norway"] }] },
-        { "tag": "🇧🇪 比利时自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇧🇪|\\bBE\\b|比利时|Belgium"] }] },
-        { "tag": "🇨🇱 智利自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇨🇱|\\bCL\\b|智利|Chile"] }] },
-        { "tag": "🇫🇮 芬兰自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇫🇮|\\bFI\\b|芬兰|Finland"] }] },
-        { "tag": "🇵🇰 巴基斯坦自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇵🇰|\\bPK\\b|巴基斯坦|Pakistan"] }] },
-        { "tag": "🇮🇱 以色列自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇮🇱|\\bIL\\b|以色列|Israel"] }] },
-        { "tag": "🇲🇾 马来西亚自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇲🇾|\\bMY\\b|马来西亚|Malaysia"] }] },
-        { "tag": "🇪🇺 欧洲联盟自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇪🇺|\\bEU\\b|欧洲联盟|European Union|EuropeanUnion"] }] }
+        { "tag": "🇿🇦 南非自动", "type": "urltest", "url": "https://www.gstatic.com/generate_204", "interval": "3m", "tolerance": 150, "outbounds": [], "filter": [{ "action": "include", "keywords": ["🇿🇦|\\bZA\\b|南非|South Africa|SouthAfrica"] }] }
     ],
     "route": {
         "auto_detect_interface": true,
@@ -232,10 +226,10 @@
             { "tag": "geosite-netflix", "type": "remote", "format": "binary", "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/netflix.srs", "download_detour": "🎯 全球直连" },
             { "tag": "geosite-apple", "type": "remote", "format": "binary", "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/apple.srs", "download_detour": "🎯 全球直连" },
             { "tag": "geosite-microsoft", "type": "remote", "format": "binary", "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/microsoft.srs", "download_detour": "🎯 全球直连" },
+            { "tag": "geosite-spotify", "type": "remote", "format": "binary", "url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/spotify.srs", "download_detour": "🎯 全球直连" },
             { "tag": "geoip-private", "type": "remote", "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs", "format": "binary", "download_detour": "🎯 全球直连" },
             { "tag": "geoip-google", "type": "remote", "format": "binary", "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/google.srs", "download_detour": "🎯 全球直连" },
             { "tag": "geoip-telegram", "type": "remote", "format": "binary", "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs", "download_detour": "🎯 全球直连" },
-            { "tag": "geosite-spotify", "type": "remote", "format": "binary", "url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/spotify.srs", "download_detour": "🎯 全球直连" },
             { "tag": "geoip-netflix", "type": "remote", "format": "binary", "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/netflix.srs", "download_detour": "🎯 全球直连" },
             { "tag": "geoip-apple", "type": "remote", "format": "binary", "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs", "download_detour": "🎯 全球直连" },
             { "tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs", "download_detour": "🎯 全球直连" },
