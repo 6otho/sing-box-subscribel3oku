@@ -194,6 +194,22 @@
       "default": "Proxy"
     },
     {
+      "tag": "🐦 X",
+      "type": "selector",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "Proxy",
+        "🇭🇰 香港自动",
+        "🇨🇳 台湾自动",
+        "🇸🇬 新加坡自动",
+        "🇯🇵 日本自动",
+        "🇰🇷 韩国自动",
+        "🇺🇸 美国自动",
+        "🌐 全球自动"
+      ],
+      "default": "Proxy"
+    },
+    {
       "tag": "🎥 TikTok",
       "type": "selector",
       "interrupt_exist_connections": true,
@@ -597,6 +613,10 @@
         "outbound": "🌵 Line"
       },
       {
+        "rule_set": "geosite-twitter",
+        "outbound": "🐦 X"
+      },
+      {
         "rule_set": "geosite-spotify",
         "outbound": "🎵 Spotify"
       },
@@ -740,6 +760,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs",
+        "download_detour": "🎯 中国直连"
+      },
+      {
+        "tag": "geosite-twitter",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/twitter.srs",
         "download_detour": "🎯 中国直连"
       },
       {
