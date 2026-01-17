@@ -49,7 +49,7 @@
         "tag": "PROXY-DNS",
         "address_resolver": "local",
         "address": "https://dns.google/dns-query",
-        "detour": "PROXY"
+        "detour": "Proxy"
       },
       {
         "tag": "FAKEIP-DNS",
@@ -134,7 +134,7 @@
       "udp_over_tcp": false
     },
     {
-      "tag": "PROXY",
+      "tag": "Proxy",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
@@ -166,7 +166,7 @@
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "PROXY",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -182,7 +182,7 @@
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "PROXY",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -191,14 +191,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "PROXY"
+      "default": "Proxy"
     },
     {
       "tag": "🐦 X",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "PROXY",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -207,14 +207,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "PROXY"
+      "default": "Proxy"
     },
     {
       "tag": "🎥 TIKTOK",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "PROXY",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -230,7 +230,7 @@
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "PROXY",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -239,14 +239,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "PROXY"
+      "default": "Proxy"
     },
     {
       "tag": "🎵 SPOTIFY",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "PROXY",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -262,7 +262,7 @@
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "PROXY",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -271,14 +271,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "PROXY"
+      "default": "Proxy"
     },
     {
       "tag": "📹 NETFLIX",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "PROXY",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -287,14 +287,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "PROXY"
+      "default": "Proxy"
     },
     {
       "tag": "🔍 GOOGLE",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "PROXY",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -303,14 +303,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "PROXY"
+      "default": "Proxy"
     },
     {
       "tag": "📖 MICROSOFT",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "PROXY",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -319,14 +319,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "PROXY"
+      "default": "Proxy"
     },
     {
       "tag": "🍎 APPLE",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "PROXY",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -335,7 +335,7 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "PROXY"
+      "default": "Proxy"
     },
     {
       "tag": "🎯 中国直连",
@@ -343,7 +343,7 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "🌐 全球自动",
-        "PROXY",
+        "Proxy",
         "🇨🇳 全局直连"
       ],
       "default": "🇨🇳 全局直连"
@@ -355,7 +355,7 @@
       "outbounds": [
         "🚫 拒绝连接",
         "🎯 中国直连",
-        "PROXY"
+        "Proxy"
       ]
     },
     {
@@ -365,7 +365,7 @@
       "outbounds": [
         "🚫 拒绝连接",
         "🎯 中国直连",
-        "PROXY"
+        "Proxy"
       ]
     },
     {
@@ -375,7 +375,7 @@
       "outbounds": [
         "🚫 拒绝连接",
         "🎯 中国直连",
-        "PROXY"
+        "Proxy"
       ]
     },
     {
@@ -521,7 +521,7 @@
   ],
   "route": {
     "auto_detect_interface": true,
-    "final": "PROXY",
+    "final": "Proxy",
     "rules": [
       {
         "action": "sniff"
