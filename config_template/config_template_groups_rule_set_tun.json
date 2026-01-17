@@ -49,7 +49,7 @@
         "tag": "PROXY-DNS",
         "address_resolver": "local",
         "address": "https://dns.google/dns-query",
-        "detour": "Proxy"
+        "detour": "PROXY"
       },
       {
         "tag": "FAKEIP-DNS",
@@ -134,7 +134,7 @@
       "udp_over_tcp": false
     },
     {
-      "tag": "Proxy",
+      "tag": "PROXY",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
@@ -166,7 +166,7 @@
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "Proxy",
+        "PROXY",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -178,11 +178,11 @@
       "default": "🇺🇸 美国自动"
     },
     {
-      "tag": "📲 Telegram",
+      "tag": "📲 TELEGRAM",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "Proxy",
+        "PROXY",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -191,14 +191,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "Proxy"
+      "default": "PROXY"
     },
     {
       "tag": "🐦 X",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "Proxy",
+        "PROXY",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -207,14 +207,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "Proxy"
+      "default": "PROXY"
     },
     {
-      "tag": "🎥 TikTok",
+      "tag": "🎥 TIKTOK",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "Proxy",
+        "PROXY",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -226,11 +226,11 @@
       "default": "🇸🇬 新加坡自动"
     },
     {
-      "tag": "📺 YouTube",
+      "tag": "📺 YOUTUBE",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "Proxy",
+        "PROXY",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -239,14 +239,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "Proxy"
+      "default": "PROXY"
     },
     {
-      "tag": "🎵 Spotify",
+      "tag": "🎵 SPOTIFY",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "Proxy",
+        "PROXY",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -258,11 +258,11 @@
       "default": "🇭🇰 香港自动"
     },
     {
-      "tag": "🌵 Line",
+      "tag": "🌵 LINE",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "Proxy",
+        "PROXY",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -271,14 +271,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "Proxy"
+      "default": "PROXY"
     },
     {
-      "tag": "📹 Netflix",
+      "tag": "📹 NETFLIX",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "Proxy",
+        "PROXY",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -287,14 +287,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "Proxy"
+      "default": "PROXY"
     },
     {
-      "tag": "🔍 Google",
+      "tag": "🔍 GOOGLE",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "Proxy",
+        "PROXY",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -303,14 +303,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "Proxy"
+      "default": "PROXY"
     },
     {
-      "tag": "📖 Microsoft",
+      "tag": "📖 MICROSOFT",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "Proxy",
+        "PROXY",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -319,14 +319,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "Proxy"
+      "default": "PROXY"
     },
     {
-      "tag": "🍎 Apple",
+      "tag": "🍎 APPLE",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "Proxy",
+        "PROXY",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -335,7 +335,7 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "Proxy"
+      "default": "PROXY"
     },
     {
       "tag": "🎯 中国直连",
@@ -343,7 +343,7 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "🌐 全球自动",
-        "Proxy",
+        "PROXY",
         "🇨🇳 全局直连"
       ],
       "default": "🇨🇳 全局直连"
@@ -355,7 +355,7 @@
       "outbounds": [
         "🚫 拒绝连接",
         "🎯 中国直连",
-        "Proxy"
+        "PROXY"
       ]
     },
     {
@@ -365,17 +365,17 @@
       "outbounds": [
         "🚫 拒绝连接",
         "🎯 中国直连",
-        "Proxy"
+        "PROXY"
       ]
     },
     {
-      "tag": "🔎 HttpDNS",
+      "tag": "🔎 HTTPDNS",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
         "🚫 拒绝连接",
         "🎯 中国直连",
-        "Proxy"
+        "PROXY"
       ]
     },
     {
@@ -521,7 +521,7 @@
   ],
   "route": {
     "auto_detect_interface": true,
-    "final": "Proxy",
+    "final": "PROXY",
     "rules": [
       {
         "action": "sniff"
@@ -587,7 +587,7 @@
         "rule_set": [
           "BlockHttpDNS"
         ],
-        "outbound": "🔎 HttpDNS"
+        "outbound": "🔎 HTTPDNS"
       },
       {
         "rule_set": [
@@ -597,7 +597,7 @@
           "geosite-instagram",
           "geosite-threads"
         ],
-        "outbound": "🔍 Google"
+        "outbound": "🔍 GOOGLE"
       },
       {
         "rule_set": "geosite-ai",
@@ -605,15 +605,15 @@
       },
       {
         "rule_set": "geosite-youtube",
-        "outbound": "📺 YouTube"
+        "outbound": "📺 YOUTUBE"
       },
       {
         "rule_set": "geosite-tiktok",
-        "outbound": "🎥 TikTok"
+        "outbound": "🎥 TIKTOK"
       },
       {
         "rule_set": "geosite-line",
-        "outbound": "🌵 Line"
+        "outbound": "🌵 LINE"
       },
       {
         "rule_set": "geosite-twitter",
@@ -621,34 +621,34 @@
       },
       {
         "rule_set": "geosite-spotify",
-        "outbound": "🎵 Spotify"
+        "outbound": "🎵 SPOTIFY"
       },
       {
         "rule_set": [
           "geoip-telegram",
           "geosite-telegram"
         ],
-        "outbound": "📲 Telegram"
+        "outbound": "📲 TELEGRAM"
       },
       {
         "rule_set": [
           "geoip-netflix",
           "geosite-netflix"
         ],
-        "outbound": "📹 Netflix"
+        "outbound": "📹 NETFLIX"
       },
       {
         "rule_set": [
           "geosite-microsoft"
         ],
-        "outbound": "📖 Microsoft"
+        "outbound": "📖 MICROSOFT"
       },
       {
         "rule_set": [
           "geoip-apple",
           "geosite-apple"
         ],
-        "outbound": "🍎 Apple"
+        "outbound": "🍎 APPLE"
       },
       {
         "rule_set": [
