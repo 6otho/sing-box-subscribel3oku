@@ -10,8 +10,8 @@
       "external_controller": "0.0.0.0:20123",
       "external_ui": "ui",
       "secret": "",
-      "default_mode": "rule",
-      "external_ui_download_url": "https://gh.iknn.eu.org/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
+      "default_mode": "规则模式",
+      "external_ui_download_url": "https://gh.ikee.cc.cd/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "🎯 中国直连",
       "access_control_allow_origin": [
         "http://127.0.0.1",
@@ -62,12 +62,12 @@
         "server": "DIRECT-DNS"
       },
       {
-        "clash_mode": "direct",
-        "server": "DIRECT-DNS"
+        "clash_mode": "全局模式",
+        "server": "PROXY-DNS"
       },
       {
-        "clash_mode": "global",
-        "server": "PROXY-DNS"
+        "clash_mode": "直连模式",
+        "server": "DIRECT-DNS"
       },
       {
         "rule_set": [
@@ -535,7 +535,7 @@
         "outbound": "🎯 中国直连"
       },
       {
-        "clash_mode": "direct",
+        "clash_mode": "直连模式",
         "outbound": "🎯 中国直连"
       },
       {
@@ -663,14 +663,14 @@
       {
         "tag": "geosite-private",
         "type": "remote",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
         "format": "binary",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-cn",
         "type": "remote",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
         "format": "binary",
         "download_detour": "🎯 中国直连"
       },
@@ -678,76 +678,76 @@
         "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-ai",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-!cn.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-!cn.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-youtube",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/youtube.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/youtube.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-google",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/google.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/google.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/telegram.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/telegram.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-tiktok",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/tiktok.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/tiktok.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-line",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/line.srs",
+        "url": "https://gh.ikee.cc.cd/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/line.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-netflix",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/netflix.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/netflix.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/apple.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/apple.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-microsoft",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/microsoft.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/microsoft.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geoip-private",
         "type": "remote",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs",
         "format": "binary",
         "download_detour": "🎯 中国直连"
       },
@@ -755,83 +755,83 @@
         "tag": "geoip-google",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/google.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/google.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geoip-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-twitter",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/twitter.srs",
+        "url": "https://gh.ikee.cc.cd/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/twitter.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-facebook",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/facebook.srs",
+        "url": "https://gh.ikee.cc.cd/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/facebook.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-instagram",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/instagram.srs",
+        "url": "https://gh.ikee.cc.cd/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/instagram.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-threads",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/threads.srs",
+        "url": "https://gh.ikee.cc.cd/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/threads.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-spotify",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/spotify.srs",
+        "url": "https://gh.ikee.cc.cd/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/spotify.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geoip-netflix",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/netflix.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/netflix.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geoip-apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geoip-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "STUN",
         "type": "remote",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/STUN/STUN.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/STUN/STUN.srs",
         "format": "binary",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "BlockHttpDNS",
         "type": "remote",
-        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/BlockHttpDNS/BlockHttpDNS.srs",
+        "url": "https://gh.ikee.cc.cd/https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/BlockHttpDNS/BlockHttpDNS.srs",
         "format": "binary",
         "download_detour": "🎯 中国直连"
       }
