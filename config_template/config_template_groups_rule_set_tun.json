@@ -10,8 +10,8 @@
       "external_controller": "0.0.0.0:20123",
       "external_ui": "ui",
       "secret": "",
-      "default_mode": "规则模式",
-      "external_ui_download_url": "https://gh.v3o.ip-ddns.com/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
+      "default_mode": "rule",
+      "external_ui_download_url": "https://gh.iknn.eu.org/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "🎯 中国直连",
       "access_control_allow_origin": [
         "http://127.0.0.1",
@@ -49,7 +49,7 @@
         "tag": "PROXY-DNS",
         "address_resolver": "local",
         "address": "https://dns.google/dns-query",
-        "detour": "手动选择"
+        "detour": "Proxy"
       },
       {
         "tag": "FAKEIP-DNS",
@@ -62,12 +62,12 @@
         "server": "DIRECT-DNS"
       },
       {
-        "clash_mode": "全局模式",
-        "server": "PROXY-DNS"
+        "clash_mode": "direct",
+        "server": "DIRECT-DNS"
       },
       {
-        "clash_mode": "直连模式",
-        "server": "DIRECT-DNS"
+        "clash_mode": "global",
+        "server": "PROXY-DNS"
       },
       {
         "rule_set": [
@@ -134,7 +134,7 @@
       "udp_over_tcp": false
     },
     {
-      "tag": "手动选择",
+      "tag": "Proxy",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
@@ -166,7 +166,7 @@
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "手动选择",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -178,11 +178,11 @@
       "default": "🇺🇸 美国自动"
     },
     {
-      "tag": "📲 TELEGRAM",
+      "tag": "📲 Telegram",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "手动选择",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -191,14 +191,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "手动选择"
+      "default": "Proxy"
     },
     {
       "tag": "🐦 X",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "手动选择",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -207,14 +207,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "手动选择"
+      "default": "Proxy"
     },
     {
-      "tag": "🎥 TIKTOK",
+      "tag": "🎥 TikTok",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "手动选择",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -226,11 +226,11 @@
       "default": "🇸🇬 新加坡自动"
     },
     {
-      "tag": "📺 YOUTUBE",
+      "tag": "📺 YouTube",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "手动选择",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -239,14 +239,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "手动选择"
+      "default": "Proxy"
     },
     {
-      "tag": "🎵 SPOTIFY",
+      "tag": "🎵 Spotify",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "手动选择",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -258,11 +258,11 @@
       "default": "🇭🇰 香港自动"
     },
     {
-      "tag": "🌵 LINE",
+      "tag": "🌵 Line",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "手动选择",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -271,14 +271,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "手动选择"
+      "default": "Proxy"
     },
     {
-      "tag": "📹 NETFLIX",
+      "tag": "📹 Netflix",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "手动选择",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -287,14 +287,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "手动选择"
+      "default": "Proxy"
     },
     {
-      "tag": "🔍 GOOGLE",
+      "tag": "🔍 Google",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "手动选择",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -303,14 +303,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "手动选择"
+      "default": "Proxy"
     },
     {
-      "tag": "📖 MICROSOFT",
+      "tag": "📖 Microsoft",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "手动选择",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -319,14 +319,14 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "手动选择"
+      "default": "Proxy"
     },
     {
-      "tag": "🍎 APPLE",
+      "tag": "🍎 Apple",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
-        "手动选择",
+        "Proxy",
         "🇭🇰 香港自动",
         "🇨🇳 台湾自动",
         "🇸🇬 新加坡自动",
@@ -335,7 +335,7 @@
         "🇺🇸 美国自动",
         "🌐 全球自动"
       ],
-      "default": "手动选择"
+      "default": "Proxy"
     },
     {
       "tag": "🎯 中国直连",
@@ -343,7 +343,7 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "🌐 全球自动",
-        "手动选择",
+        "Proxy",
         "🇨🇳 全局直连"
       ],
       "default": "🇨🇳 全局直连"
@@ -355,7 +355,7 @@
       "outbounds": [
         "🚫 拒绝连接",
         "🎯 中国直连",
-        "手动选择"
+        "Proxy"
       ]
     },
     {
@@ -365,17 +365,17 @@
       "outbounds": [
         "🚫 拒绝连接",
         "🎯 中国直连",
-        "手动选择"
+        "Proxy"
       ]
     },
     {
-      "tag": "🔎 HTTPDNS",
+      "tag": "🔎 HttpDNS",
       "type": "selector",
       "interrupt_exist_connections": true,
       "outbounds": [
         "🚫 拒绝连接",
         "🎯 中国直连",
-        "手动选择"
+        "Proxy"
       ]
     },
     {
@@ -521,7 +521,7 @@
   ],
   "route": {
     "auto_detect_interface": true,
-    "final": "手动选择",
+    "final": "Proxy",
     "rules": [
       {
         "action": "sniff"
@@ -535,7 +535,7 @@
         "outbound": "🎯 中国直连"
       },
       {
-        "clash_mode": "直连模式",
+        "clash_mode": "direct",
         "outbound": "🎯 中国直连"
       },
       {
@@ -587,7 +587,7 @@
         "rule_set": [
           "BlockHttpDNS"
         ],
-        "outbound": "🔎 HTTPDNS"
+        "outbound": "🔎 HttpDNS"
       },
       {
         "rule_set": [
@@ -597,7 +597,7 @@
           "geosite-instagram",
           "geosite-threads"
         ],
-        "outbound": "🔍 GOOGLE"
+        "outbound": "🔍 Google"
       },
       {
         "rule_set": "geosite-ai",
@@ -605,15 +605,15 @@
       },
       {
         "rule_set": "geosite-youtube",
-        "outbound": "📺 YOUTUBE"
+        "outbound": "📺 YouTube"
       },
       {
         "rule_set": "geosite-tiktok",
-        "outbound": "🎥 TIKTOK"
+        "outbound": "🎥 TikTok"
       },
       {
         "rule_set": "geosite-line",
-        "outbound": "🌵 LINE"
+        "outbound": "🌵 Line"
       },
       {
         "rule_set": "geosite-twitter",
@@ -621,34 +621,34 @@
       },
       {
         "rule_set": "geosite-spotify",
-        "outbound": "🎵 SPOTIFY"
+        "outbound": "🎵 Spotify"
       },
       {
         "rule_set": [
           "geoip-telegram",
           "geosite-telegram"
         ],
-        "outbound": "📲 TELEGRAM"
+        "outbound": "📲 Telegram"
       },
       {
         "rule_set": [
           "geoip-netflix",
           "geosite-netflix"
         ],
-        "outbound": "📹 NETFLIX"
+        "outbound": "📹 Netflix"
       },
       {
         "rule_set": [
           "geosite-microsoft"
         ],
-        "outbound": "📖 MICROSOFT"
+        "outbound": "📖 Microsoft"
       },
       {
         "rule_set": [
           "geoip-apple",
           "geosite-apple"
         ],
-        "outbound": "🍎 APPLE"
+        "outbound": "🍎 Apple"
       },
       {
         "rule_set": [
@@ -663,14 +663,14 @@
       {
         "tag": "geosite-private",
         "type": "remote",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-private.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
         "format": "binary",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-cn",
         "type": "remote",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-cn.srs",
+        "url": "https://gh.ikuu.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
         "format": "binary",
         "download_detour": "🎯 中国直连"
       },
@@ -678,76 +678,76 @@
         "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-category-ads-all.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-ai",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-ai.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-!cn.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-youtube",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-youtube.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/youtube.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-google",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-google.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/google.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-telegram.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/telegram.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-tiktok",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-tiktok.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/tiktok.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-line",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-line.srs",
+        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/line.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-netflix",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-netflix.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/netflix.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-apple.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/apple.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-microsoft",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-microsoft.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/microsoft.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geoip-private",
         "type": "remote",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-private.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs",
         "format": "binary",
         "download_detour": "🎯 中国直连"
       },
@@ -755,83 +755,83 @@
         "tag": "geoip-google",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-google.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/google.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geoip-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-telegram.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-twitter",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-twitter.srs",
+        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/twitter.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-facebook",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-facebook.srs",
+        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/facebook.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-instagram",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-instagram.srs",
+        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/instagram.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-threads",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-threads.srs",
+        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/threads.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geosite-spotify",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-spotify.srs",
+        "url": "https://gh.iknn.eu.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/spotify.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geoip-netflix",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-netflix.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/netflix.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geoip-apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-apple.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "geoip-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-cn.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "STUN",
         "type": "remote",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/STUN.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/STUN/STUN.srs",
         "format": "binary",
         "download_detour": "🎯 中国直连"
       },
       {
         "tag": "BlockHttpDNS",
         "type": "remote",
-        "url": "https://sb.v3o.ip-ddns.com/singbox/BlockHttpDNS.srs",
+        "url": "https://gh.iknn.eu.org/https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/BlockHttpDNS/BlockHttpDNS.srs",
         "format": "binary",
         "download_detour": "🎯 中国直连"
       }
