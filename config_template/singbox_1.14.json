@@ -24,7 +24,8 @@
         "cache_file": {
             "enabled": true,
             "path": "cache.db",
-            "store_fakeip": true
+            "store_fakeip": true,
+            "store_dns": true
         }
     },
     "dns": {
@@ -551,6 +552,15 @@
         "auto_detect_interface": true,
         "final": "手动选择",
         "rules":[
+            {
+                "network": [
+                    "udp"
+                ],
+                "port": [
+                    443
+                ],
+                "action": "reject"
+            },
             {
                 "action": "sniff"
             },
